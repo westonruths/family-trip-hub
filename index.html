@@ -1,396 +1,95 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ruths Family July Trip Decision Hub</title>
-  <meta name="description" content="A shareable decision hub comparing three family-friendly July trip options from Kirkland: Squamish/Whistler, North Vancouver, and Sooke/Victoria." />
-  <meta property="og:title" content="July Family Trip Decision Hub" />
-  <meta property="og:description" content="Compare three family-friendly itineraries with lodging, daily plans, logistics, and why each trip is worth leaving home." />
-  <meta property="og:type" content="website" />
-  <style>
-    :root {
-      --ink: #17211d;
-      --muted: #5d6863;
-      --paper: #fffaf0;
-      --panel: #ffffff;
-      --sage: #dfeadd;
-      --forest: #21493b;
-      --river: #2f6f7e;
-      --sun: #f5b85c;
-      --sand: #f4e1bd;
-      --line: rgba(23,33,29,.14);
-      --shadow: 0 22px 60px rgba(25, 46, 36, .14);
-      --radius: 24px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 10% 0%, rgba(245,184,92,.35), transparent 36rem),
-        radial-gradient(circle at 95% 10%, rgba(47,111,126,.16), transparent 32rem),
-        linear-gradient(180deg, #fffaf0 0%, #f8f2e7 42%, #edf4ee 100%);
-      line-height: 1.55;
-    }
-    a { color: var(--river); text-decoration: none; font-weight: 700; }
-    a:hover { text-decoration: underline; }
-    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
-    .nav {
-      position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(18px);
-      background: rgba(255,250,240,.82);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav .wrap { display: flex; gap: 18px; align-items: center; justify-content: space-between; padding: 12px 0; }
-    .brand { font-weight: 900; letter-spacing: -.02em; }
-    .navlinks { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-    .navlinks a { font-size: 13px; color: var(--ink); opacity: .78; padding: 8px 10px; border-radius: 999px; }
-    .navlinks a:hover { background: rgba(33,73,59,.08); text-decoration: none; opacity: 1; }
-    header.hero { padding: 72px 0 42px; }
-    .eyebrow { display: inline-flex; gap: 8px; align-items: center; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.72); color: var(--forest); font-weight: 800; font-size: 13px; }
-    h1 { font-size: clamp(42px, 7vw, 82px); line-height: .96; letter-spacing: -.065em; margin: 18px 0; max-width: 980px; }
-    h2 { font-size: clamp(28px, 4vw, 48px); line-height: 1.04; letter-spacing: -.045em; margin: 0 0 16px; }
-    h3 { font-size: 24px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -.025em; }
-    h4 { margin: 22px 0 8px; font-size: 17px; }
-    .lede { max-width: 850px; font-size: clamp(18px, 2.2vw, 23px); color: #34423b; margin: 0 0 24px; }
-    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; align-items: stretch; margin-top: 28px; }
-    .card { background: rgba(255,255,255,.78); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .hero-card { padding: 24px; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; position: relative; }
-    .hero-card:before { content: ""; position: absolute; inset: auto -18% -34% auto; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(47,111,126,.22), transparent 68%); }
-    .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; position: relative; }
-    .stat { padding: 16px; border-radius: 18px; background: rgba(223,234,221,.76); }
-    .stat strong { display: block; font-size: 26px; letter-spacing: -.04em; }
-    .stat span { color: var(--muted); font-size: 13px; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 16px; border-radius: 999px; background: var(--forest); color: white; font-weight: 900; box-shadow: 0 12px 30px rgba(33,73,59,.22); }
-    .btn.secondary { background: white; color: var(--forest); border: 1px solid var(--line); box-shadow: none; }
-    .btn:hover { text-decoration: none; transform: translateY(-1px); }
-    section { padding: 42px 0; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
-    .section-head p { max-width: 650px; color: var(--muted); margin: 0; }
-    .matrix { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .rank-card { padding: 22px; position: relative; overflow: hidden; }
-    .rank { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--forest); color: white; font-weight: 900; margin-bottom: 16px; }
-    .rank-card.winner { border: 2px solid rgba(245,184,92,.8); }
-    .label { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; font-size: 12px; font-weight: 900; color: var(--forest); background: var(--sage); margin: 5px 6px 0 0; }
-    .label.warn { color: #7a4b07; background: #ffe4ac; }
-    .score { display: grid; gap: 8px; margin: 18px 0; }
-    .score-row { display: grid; grid-template-columns: 120px 1fr; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
-    .bar { height: 9px; border-radius: 999px; background: rgba(23,33,29,.12); overflow: hidden; }
-    .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--river), var(--sun)); border-radius: inherit; }
-    .trip { margin-top: 22px; overflow: hidden; }
-    .trip-hero { display: grid; grid-template-columns: 1fr .9fr; gap: 0; }
-    .trip-art { min-height: 320px; padding: 24px; color: white; display: flex; align-items: end; background: linear-gradient(135deg, #244f43, #2f6f7e); position: relative; overflow: hidden; }
-    .trip-art:after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 78% 18%, rgba(255,255,255,.36), transparent 14rem), linear-gradient(160deg, transparent 45%, rgba(0,0,0,.2)); }
-    .trip-art.coast { background: linear-gradient(135deg, #29536b, #a86f49); }
-    .trip-art.city { background: linear-gradient(135deg, #1d4c5c, #3d7e68); }
-    .trip-art .art-text { position: relative; z-index: 1; }
-    .trip-art .art-text div:first-child { font-size: 13px; font-weight: 900; opacity: .8; text-transform: uppercase; letter-spacing: .12em; }
-    .trip-art .art-text div:last-child { font-size: clamp(34px, 5vw, 60px); line-height: .92; font-weight: 950; letter-spacing: -.055em; max-width: 480px; }
-    .trip-summary { padding: 26px; }
-    .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 18px; }
-    .fact { border: 1px solid var(--line); border-radius: 16px; padding: 12px; background: rgba(255,250,240,.72); }
-    .fact b { display: block; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-    .fact span { font-weight: 900; }
-    .details { padding: 0 26px 26px; }
-    .day-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0 24px; }
-    .day { padding: 15px; background: rgba(223,234,221,.55); border: 1px solid var(--line); border-radius: 18px; }
-    .day b { display: block; color: var(--forest); margin-bottom: 6px; }
-    .day p { margin: 0; color: #34423b; font-size: 14px; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .callout { padding: 18px; border-radius: 18px; background: #fff2d6; border: 1px solid rgba(122,75,7,.18); }
-    .callout.green { background: rgba(223,234,221,.7); border-color: rgba(33,73,59,.15); }
-    .mini-table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 18px; background: white; border: 1px solid var(--line); }
-    .mini-table th, .mini-table td { text-align: left; padding: 13px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
-    .mini-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); background: rgba(223,234,221,.55); }
-    .mini-table tr:last-child td { border-bottom: 0; }
-    .source-list { columns: 2; column-gap: 28px; color: var(--muted); }
-    .source-list li { break-inside: avoid; margin: 0 0 8px; }
-    footer { padding: 44px 0 60px; color: var(--muted); }
-    @media (max-width: 900px) {
-      .hero-grid, .trip-hero, .two-col { grid-template-columns: 1fr; }
-      .matrix, .day-grid { grid-template-columns: 1fr; }
-      .source-list { columns: 1; }
-    }
-    @media print {
-      .nav, .buttons { display: none; }
-      body { background: white; }
-      .card { box-shadow: none; }
-      section { padding: 22px 0; }
-    }
-  </style>
-</head>
-<body>
-  <nav class="nav">
-    <div class="wrap">
-      <div class="brand">July Trip Decision Hub</div>
-      <div class="navlinks">
-        <a href="#ranking">Top 3</a>
-        <a href="#squamish">Squamish</a>
-        <a href="#northvan">North Vancouver</a>
-        <a href="#sooke">Sooke</a>
-        <a href="#method">How to decide</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Family trip options · July 3–11 window · from Kirkland</span>
-      <h1>Three shareable trip concepts that are actually worth leaving home for.</h1>
-      <p class="lede">This hub compares the best current family-trip options after removing places already done or already planned: Leavenworth, Orcas/San Juans, Mount Rainier, and Olympic National Park.</p>
-      <div class="buttons">
-        <a class="btn" href="#ranking">See the recommendation</a>
-        <a class="btn secondary" href="#method">How this was evaluated</a>
-      </div>
-      <div class="hero-grid">
-        <div class="hero-card card">
-          <div>
-            <h3>The decision lens</h3>
-            <p>For each destination, the bar is not “can we find a 3-bedroom place?” The bar is: does this destination give a family with a toddler a distinct experience they could not approximate by staying home and doing nearby Eastside/Cascade hikes?</p>
-          </div>
-          <div class="stat-grid">
-            <div class="stat"><strong>3+</strong><span>bedrooms required</span></div>
-            <div class="stat"><strong>&lt;$6k</strong><span>lodging target</span></div>
-            <div class="stat"><strong>5</strong><span>nights assumed</span></div>
-            <div class="stat"><strong>1</strong><span>toddler-friendly base</span></div>
-          </div>
-        </div>
-        <div class="hero-card card">
-          <div>
-            <h3>Borrowed from top itinerary sellers</h3>
-            <p>High-performing travel itinerary pages typically lead with an emotional promise, show a quick comparison, prove feasibility with logistics and pricing, then let the reader expand into day-by-day detail.</p>
-          </div>
-          <p><strong>Used here:</strong> hero hook, ranked cards, itinerary rhythm, lodging proof, family-fit notes, caveats, and a final decision matrix.</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="ranking">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Top three recommendations</h2>
-            <p>All three fit the family brief; the ranking depends on how much novelty, drive friction, and toddler ease you want.</p>
-          </div>
-        </div>
-        <div class="matrix">
-          <article class="rank-card card winner">
-            <div class="rank">1</div>
-            <h3>Squamish base + Whistler day</h3>
-            <p><strong>Best overall.</strong> Sea-to-Sky drama, gondola views, lakes, waterfalls, Whistler Village, and enough grocery/restaurant infrastructure to keep toddler logistics sane.</p>
-            <span class="label">Most distinctive</span><span class="label">4BR</span><span class="label">Travel crib</span>
-            <div class="score">
-              <div class="score-row"><span>Novelty</span><div class="bar"><i style="width:96%"></i></div></div>
-              <div class="score-row"><span>Toddler ease</span><div class="bar"><i style="width:88%"></i></div></div>
-              <div class="score-row"><span>Logistics</span><div class="bar"><i style="width:74%"></i></div></div>
-            </div>
-            <a href="#squamish">View itinerary →</a>
-          </article>
-          <article class="rank-card card">
-            <div class="rank">2</div>
-            <h3>North Vancouver / Vancouver</h3>
-            <p><strong>Easiest Canada trip.</strong> Harbor, Stanley Park, Lynn Canyon rainforest, Grouse/Capilano, Granville Island, plus excellent grocery and rainy-day backup.</p>
-            <span class="label">Lowest friction</span><span class="label">3BR</span><span class="label">Pack ’n Play</span>
-            <div class="score">
-              <div class="score-row"><span>Novelty</span><div class="bar"><i style="width:78%"></i></div></div>
-              <div class="score-row"><span>Toddler ease</span><div class="bar"><i style="width:94%"></i></div></div>
-              <div class="score-row"><span>Logistics</span><div class="bar"><i style="width:88%"></i></div></div>
-            </div>
-            <a href="#northvan">View itinerary →</a>
-          </article>
-          <article class="rank-card card">
-            <div class="rank">3</div>
-            <h3>Sooke / Victoria</h3>
-            <p><strong>Best coastal/ferry vacation.</strong> Marina base, tidepools, Sooke Basin, East Sooke, French Beach, and Victoria day-trip energy.</p>
-            <span class="label">Coastal</span><span class="label">3BR/3BA</span><span class="label warn">Ferry-heavy</span>
-            <div class="score">
-              <div class="score-row"><span>Novelty</span><div class="bar"><i style="width:86%"></i></div></div>
-              <div class="score-row"><span>Toddler ease</span><div class="bar"><i style="width:78%"></i></div></div>
-              <div class="score-row"><span>Logistics</span><div class="bar"><i style="width:58%"></i></div></div>
-            </div>
-            <a href="#sooke">View itinerary →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="squamish">
-      <div class="wrap">
-        <article class="trip card">
-          <div class="trip-hero">
-            <div class="trip-art"><div class="art-text"><div>Recommendation #1</div><div>Squamish + Whistler: the Sea-to-Sky family adventure.</div></div></div>
-            <div class="trip-summary">
-              <h2>Best overall choice</h2>
-              <p><strong>Why it wins:</strong> It is the most compelling answer to “why not just stay home?” Howe Sound, granite cliffs, alpine gondola views, Whistler Village, lakes, waterfalls, and Pemberton valley are meaningfully different from the Eastside backyard.</p>
-              <div class="facts">
-                <div class="fact"><b>Lodging checked</b><span>Cozy Squamish Home</span></div>
-                <div class="fact"><b>Dates</b><span>Jul 5–10, 2026</span></div>
-                <div class="fact"><b>Total shown</b><span>$2,473 / 5 nights</span></div>
-                <div class="fact"><b>Layout</b><span>4BR · 2BA · 4 beds</span></div>
-                <div class="fact"><b>Toddler fit</b><span>Travel crib listed</span></div>
-                <div class="fact"><b>Drive shape</b><span>~4.5–6h with border/traffic</span></div>
-              </div>
-              <p><a href="https://www.airbnb.com/rooms/1635753686728824498?adults=2&check_in=2026-07-05&check_out=2026-07-10&children=1&search_mode=regular_search">Open lodging listing</a></p>
-            </div>
-          </div>
-          <div class="details">
-            <div class="day-grid">
-              <div class="day"><b>Day 1 · Arrive</b><p>Border crossing, Sea-to-Sky drive, optional Shannon Falls reset, Squamish groceries, early bedtime.</p></div>
-              <div class="day"><b>Day 2 · Gondola</b><p>Sea to Sky Gondola, summit bridge/views, lunch, nap, downtown Squamish stroll.</p></div>
-              <div class="day"><b>Day 3 · Lake day</b><p>Alice Lake picnic, shore play, short trails, nap, easy dinner.</p></div>
-              <div class="day"><b>Day 4 · Whistler</b><p>Whistler Village, Olympic Plaza, optional Peak 2 Peak if clear, Lost Lake/Rainbow Park.</p></div>
-              <div class="day"><b>Day 5 · Pemberton</b><p>Nairn Falls with carrier or Brandywine Falls fallback; final Squamish dinner.</p></div>
-              <div class="day"><b>Day 6 · Home</b><p>Pack early, check DriveBC/border waits, return before Vancouver traffic stacks up.</p></div>
-            </div>
-            <div class="two-col">
-              <div class="callout green"><strong>Family upside:</strong> short high-reward activities; grocery access; pack-and-play confirmed; enough variety that bad weather or toddler fatigue does not collapse the trip.</div>
-              <div class="callout"><strong>Decision caveat:</strong> border + Vancouver + Sea-to-Sky traffic are real. This works best with early departures and no Friday-afternoon optimism.</div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="northvan">
-      <div class="wrap">
-        <article class="trip card">
-          <div class="trip-hero">
-            <div class="trip-art city"><div class="art-text"><div>Recommendation #2</div><div>North Vancouver: city, harbor, rainforest, easy backups.</div></div></div>
-            <div class="trip-summary">
-              <h2>Easiest Canada trip</h2>
-              <p><strong>Why it works:</strong> North Vancouver makes the international trip feel real without making every day a car project: Shipyards, Stanley Park, Lynn Canyon, Grouse Mountain, SeaBus, Granville Island, restaurants, and full grocery access.</p>
-              <div class="facts">
-                <div class="fact"><b>Lodging checked</b><span>Family Friendly 3BR</span></div>
-                <div class="fact"><b>Dates</b><span>Jul 5–10, 2026</span></div>
-                <div class="fact"><b>Total shown</b><span>$1,916 / 5 nights</span></div>
-                <div class="fact"><b>Layout</b><span>3BR · 2BA · 3 beds</span></div>
-                <div class="fact"><b>Toddler fit</b><span>Pack ’n Play on request</span></div>
-                <div class="fact"><b>Drive shape</b><span>~3.5–5h with border</span></div>
-              </div>
-              <p><a href="https://www.airbnb.com/rooms/1127958109562348096?adults=2&check_in=2026-07-05&check_out=2026-07-10&children=1&search_mode=regular_search">Open lodging listing</a></p>
-            </div>
-          </div>
-          <div class="details">
-            <div class="day-grid">
-              <div class="day"><b>Day 1 · Arrive</b><p>Border crossing, North Van groceries, Lower Lonsdale / Shipyards waterfront stroller walk.</p></div>
-              <div class="day"><b>Day 2 · Stanley Park</b><p>Seawall, playground, totem poles, picnic; Aquarium as weather backup.</p></div>
-              <div class="day"><b>Day 3 · Rainforest</b><p>Lynn Canyon with carrier; Maplewood Farm for toddler-forward outing.</p></div>
-              <div class="day"><b>Day 4 · Mountain</b><p>Grouse Mountain Skyride or Capilano; nap; optional SeaBus ride.</p></div>
-              <div class="day"><b>Day 5 · Market day</b><p>Granville Island Public Market + Kids Market; optional Queen Elizabeth Park.</p></div>
-              <div class="day"><b>Day 6 · Home</b><p>Choose departure around border waits; avoid Friday late afternoon if possible.</p></div>
-            </div>
-            <div class="two-col">
-              <div class="callout green"><strong>Family upside:</strong> lowest operational risk, most stroller-compatible, best restaurants/groceries, and strongest rainy-day coverage.</div>
-              <div class="callout"><strong>Decision caveat:</strong> less “epic nature vacation” than Squamish/Whistler. Pick this if family consensus values ease and variety over alpine drama.</div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="sooke">
-      <div class="wrap">
-        <article class="trip card">
-          <div class="trip-hero">
-            <div class="trip-art coast"><div class="art-text"><div>Recommendation #3</div><div>Sooke + Victoria: harbor, tidepools, ferry adventure.</div></div></div>
-            <div class="trip-summary">
-              <h2>Best coastal/ferry option</h2>
-              <p><strong>Why it works:</strong> Sooke adds marina life, rugged beaches, tidepools, Sooke Basin, and Victoria’s Inner Harbour. It is more of a full coastal vacation than a simple hiking base.</p>
-              <div class="facts">
-                <div class="fact"><b>Lodging checked</b><span>Sooke Harbour Resort 5009</span></div>
-                <div class="fact"><b>Dates</b><span>Jul 3–8, 2026</span></div>
-                <div class="fact"><b>Total shown</b><span>$2,322 / 5 nights</span></div>
-                <div class="fact"><b>Layout</b><span>3BR · 3BA · 1,345 sq ft</span></div>
-                <div class="fact"><b>Toddler fit</b><span>Kitchen/laundry; crib not confirmed</span></div>
-                <div class="fact"><b>Drive shape</b><span>~5.5–6.5h + waits</span></div>
-              </div>
-              <p><a href="https://truekeyvacations.com/rental/5009/">Open lodging listing</a></p>
-            </div>
-          </div>
-          <div class="details">
-            <div class="day-grid">
-              <div class="day"><b>Day 1 · Ferry</b><p>Border, Tsawwassen ferry, Swartz Bay, groceries, Sooke marina check-in.</p></div>
-              <div class="day"><b>Day 2 · Local coast</b><p>Sooke Potholes morning, nap, Whiffin Spit flat harbor walk.</p></div>
-              <div class="day"><b>Day 3 · East Sooke</b><p>Aylard Farm / East Sooke short coastal wandering; picnic; tidepool time.</p></div>
-              <div class="day"><b>Day 4 · Victoria</b><p>Inner Harbour, Fisherman’s Wharf, Beacon Hill Park, optional museum/garden.</p></div>
-              <div class="day"><b>Day 5 · Beach</b><p>French Beach for easier access or Sandcut with carrier; final marina dinner.</p></div>
-              <div class="day"><b>Day 6 · Home</b><p>Reserved ferry back, border buffer, flexible lunch stop.</p></div>
-            </div>
-            <div class="two-col">
-              <div class="callout green"><strong>Family upside:</strong> water, ferry, beach, harbor, and Victoria in one package; lodging has strong space and laundry practicality.</div>
-              <div class="callout"><strong>Decision caveat:</strong> ferry + border + island driving makes this the hardest logistics of the top three. Also more overlap with prior island/coastal trips.</div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="method">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>How to decide together</h2>
-            <p>Use this table if the group wants a fast family vote.</p>
-          </div>
-        </div>
-        <table class="mini-table">
-          <thead><tr><th>If the family values…</th><th>Choose</th><th>Why</th></tr></thead>
-          <tbody>
-            <tr><td>Most memorable “we went somewhere” feeling</td><td>Squamish + Whistler</td><td>Sea-to-Sky scenery, gondola, alpine lakes, Whistler Village, waterfalls.</td></tr>
-            <tr><td>Easiest toddler logistics</td><td>North Vancouver</td><td>Shortest travel, strongest groceries/restaurants, stroller days, indoor backups.</td></tr>
-            <tr><td>Coastal/ferry vacation energy</td><td>Sooke / Victoria</td><td>Ferry, marina, tidepools, Sooke beaches, Victoria harbor.</td></tr>
-            <tr><td>Bucket-list Canadian Rockies</td><td>Save Banff/Lake Louise for another trip</td><td>It is ~11.5–12.5 hours of driving from Kirkland before stops; better as a flight-to-Calgary trip.</td></tr>
-          </tbody>
-        </table>
-
-        <div class="two-col" style="margin-top:18px">
-          <div class="card" style="padding:22px">
-            <h3>Travel-site layout patterns used</h3>
-            <ul>
-              <li><strong>Hero promise first:</strong> sell the feeling before details.</li>
-              <li><strong>Ranked cards:</strong> make comparison fast for a family group.</li>
-              <li><strong>Proof blocks:</strong> dates, price, beds, toddler fit, and logistics are visible above the day-by-day plan.</li>
-              <li><strong>Day-by-day rhythm:</strong> each day has one main outing, nap/reset space, and an easy evening.</li>
-              <li><strong>Caveats are explicit:</strong> border/ferry/traffic risks are surfaced before anyone emotionally commits.</li>
-            </ul>
-          </div>
-          <div class="card" style="padding:22px">
-            <h3>Important caveats</h3>
-            <ul>
-              <li>Displayed lodging totals were live at research time and can change.</li>
-              <li>Final checkout may add taxes or change cancellation terms.</li>
-              <li>Confirm pack-and-play floor space with host before booking.</li>
-              <li>For Canada, everyone should have valid border documents, including toddler.</li>
-              <li>Check CBSA/WSDOT border waits, DriveBC, and BC Ferries before travel.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card" style="padding:22px; margin-top:18px">
-          <h3>Research references</h3>
-          <ul class="source-list">
-            <li>Kimkim itinerary pages: multi-option itineraries by trip length with day-by-day summaries.</li>
-            <li>Intrepid Travel Canada: trip cards emphasizing days, style, price, rating, and departures.</li>
-            <li>Black Tomato Canada: emotional luxury destination positioning and bespoke family-trip framing.</li>
-            <li>Rough Guides Canada itineraries: recommended itineraries and high-level route rationale.</li>
-            <li>BC Parks / official destination pages for Shannon Falls, Alice Lake, Nairn Falls, and regional parks.</li>
-            <li>Official/near-official pages for Sea to Sky Gondola, Whistler parks, City of North Vancouver Shipyards, and Destination Vancouver.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <p><strong>Prepared for family decision-making.</strong> No lodging booking, host contact, calendar event, reminder, or purchase was made. Last updated June 13, 2026.</p>
-    </div>
-  </footer>
-</body>
-</html>
+     1|<!doctype html>
+     2|<html lang="en">
+     3|<head>
+     4|  <meta charset="utf-8" />
+     5|  <meta name="viewport" content="width=device-width, initial-scale=1" />
+     6|  <title>July Family Trip Shortlist</title>
+     7|  <meta name="description" content="Photo-first shortlist of three family-friendly July trip options from Kirkland with direct links to lodging and points of interest." />
+     8|  <meta property="og:title" content="July Family Trip Shortlist" />
+     9|  <meta property="og:description" content="Compare Squamish/Whistler, North Vancouver, and Sooke/Victoria with photos, lodging links, POIs, prices, and day plans." />
+    10|  <meta property="og:type" content="website" />
+    11|  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    12|  <style>
+    13|    :root{
+    14|      --ink:#222; --muted:#6a6a6a; --line:#e5e5e5; --bg:#fff; --soft:#f7f7f7;
+    15|      --red:#ff385c; --green:#0d7a5f; --amber:#996400;
+    16|      --shadow:rgba(0,0,0,.02) 0 0 0 1px, rgba(0,0,0,.04) 0 2px 6px, rgba(0,0,0,.10) 0 4px 14px;
+    17|      --radius:24px;
+    18|    }
+    19|    *{box-sizing:border-box}
+    20|    html{scroll-behavior:smooth}
+    21|    body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.35}
+    22|    a{color:inherit;text-decoration:none}
+    23|    .wrap{width:min(1240px,calc(100% - 32px));margin:auto}
+    24|    .topbar{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);z-index:10;border-bottom:1px solid var(--line)}
+    25|    .topbar .wrap{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    26|    .brand{font-weight:900;letter-spacing:-.03em;font-size:20px}.brand b{color:var(--red)}
+    27|    .nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.nav a{font-weight:800;font-size:14px;padding:9px 12px;border-radius:999px;background:var(--soft)}.nav a:hover{background:#eee}
+    28|    .hero{padding:42px 0 22px}.kicker{font-weight:900;color:var(--red);letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+    29|    h1{font-size:clamp(38px,6vw,76px);line-height:.94;letter-spacing:-.065em;margin:10px 0 14px;max-width:920px}
+    30|    .sub{font-size:clamp(18px,2.2vw,24px);color:var(--muted);max-width:780px;margin:0}.sub strong{color:var(--ink)}
+    31|    .quick{margin-top:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.pill{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:11px 14px;font-weight:800;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pill span{color:var(--muted);font-weight:700}
+    32|    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0 42px}.card{border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;background:white;position:relative}.card:hover{transform:translateY(-2px);transition:.18s ease;box-shadow:rgba(0,0,0,.08) 0 8px 24px}.photo{height:270px;background:#ddd;position:relative;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block}.badge{position:absolute;top:14px;left:14px;background:white;padding:8px 11px;border-radius:999px;font-weight:900;font-size:13px;box-shadow:var(--shadow)}.rank{position:absolute;top:14px;right:14px;background:var(--red);color:white;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:1000;font-size:18px}.content{padding:18px}h2{font-size:26px;line-height:1.03;letter-spacing:-.04em;margin:0 0 6px}.one-liner{font-size:15px;color:var(--muted);margin:0 0 14px;min-height:42px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0}.stat{background:var(--soft);border-radius:14px;padding:10px}.stat b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}.stat span{font-weight:900}.cta-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btn{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:12px;font-weight:900;background:var(--ink);color:white}.btn.red{background:var(--red)}.btn.light{background:var(--soft);color:var(--ink);border:1px solid var(--line)}.btn:hover{filter:brightness(.96)}
+    33|    .section{padding:20px 0 46px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px;gap:14px}.section h2{font-size:clamp(30px,4vw,48px)}.section p{color:var(--muted);margin:0}.trip{border-top:1px solid var(--line);padding:28px 0}.trip-top{display:grid;grid-template-columns:360px 1fr;gap:24px;align-items:start}.trip-img{height:260px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);position:sticky;top:92px}.trip-img img{width:100%;height:100%;object-fit:cover}.trip-main h3{font-size:34px;line-height:1;letter-spacing:-.045em;margin:0 0 8px}.trip-meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.tag{font-weight:900;font-size:13px;padding:8px 11px;border-radius:999px;background:var(--soft);border:1px solid var(--line)}.tag.good{background:#e8f6f1;color:var(--green);border-color:#cfe8df}.tag.warn{background:#fff2cf;color:var(--amber);border-color:#f0d899}.poi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.poi{min-height:72px;border:1px solid var(--line);border-radius:16px;padding:12px;background:white;font-weight:900}.poi small{display:block;color:var(--muted);font-weight:700;margin-top:4px}.poi:hover{border-color:var(--red);box-shadow:var(--shadow)}.days{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px}.day{background:var(--soft);border-radius:14px;padding:10px;font-size:13px}.day b{display:block;font-size:12px;color:var(--red);margin-bottom:4px}.note{background:#fff8e8;border:1px solid #f2dfb5;border-radius:18px;padding:14px;margin-top:14px;color:#5d4300}.compare{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}th,td{text-align:left;padding:14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--soft);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}tr:last-child td{border-bottom:0}.footer{padding:32px 0;color:var(--muted);border-... [truncated]
+    34|    @media(max-width:980px){.grid,.quick{grid-template-columns:1fr}.trip-top{grid-template-columns:1fr}.trip-img{position:relative;top:auto}.poi-grid{grid-template-columns:repeat(2,1fr)}.days{grid-template-columns:repeat(2,1fr)}.nav{display:none}}
+    35|  </style>
+    36|</head>
+    37|<body>
+    38|  <header class="topbar">
+    39|    <div class="wrap"><div class="brand"><b>July</b> Family Trip Shortlist</div><nav class="nav"><a href="#cards">Options</a><a href="#details">Details</a><a href="#compare">Compare</a></nav></div>
+    40|  </header>
+    41|
+    42|  <main class="wrap">
+    43|    <section class="hero">
+    44|      <div class="kicker">Pick in 10 seconds, explore in 10 minutes</div>
+    45|      <h1>Three trip options, photo-first.</h1>
+    46|      <p class="sub"><strong>Best overall: Squamish + Whistler.</strong> If ease beats drama, choose North Vancouver. If the family wants a ferry/coast vacation, choose Sooke.</p>
+    47|      <div class="quick">
+    48|        <div class="pill">🏆 Best overall: <span>Squamish</span></div>
+    49|        <div class="pill">👶 Easiest toddler logistics: <span>North Van</span></div>
+    50|        <div class="pill">🌊 Best coastal feel: <span>Sooke</span></div>
+    51|        <div class="pill">💵 Lodging shown: <span>$1.9k–$2.5k</span></div>
+    52|      </div>
+    53|    </section>
+    54|
+    55|    <section id="cards" class="grid" aria-label="Trip option cards">
+    56|      <article class="card">
+    57|        <div class="photo"><img src="https://www.exploresquamish.com/site/assets/files/1/website_lead_image.jpg" alt="View from Sea to Sky Gondola near Squamish"><div class="badge">Best overall</div><div class="rank">1</div></div>
+    58|        <div class="content"><h2>Squamish + Whistler</h2><p class="one-liner">Biggest payoff: Howe Sound, gondola, lakes, waterfalls, Whistler Village.</p><div class="stats"><div class="stat"><b>Total shown</b><span>$2,473</span></div><div class="stat"><b>Home base</b><span>4BR / 2BA</span></div><div class="stat"><b>Dates</b><span>Jul 5–10</span></div><div class="stat"><b>Toddler</b><span>Travel crib</span></div></div><div class="cta-row"><a class="btn red" href="#squamish">Explore</a><a class="btn light" href="https://www.airbnb.com/rooms/1635753686728824498?adults=2&check_in=2026-07-05&check_out=2026-07-10&children=1&search_mode=regular_search">Lodging</a></div></div>
+    59|      </article>
+    60|      <article class="card">
+    61|        <div class="photo"><img src="https://images.spaicelabs.com/images/flus6j8v/production/d647b667df3ec3090386f302bd28fd087e257633-3340x1726.png?rect=26,0,3288,1726&w=1200&h=630" alt="Stanley Park seawall in Vancouver"><div class="badge">Easiest</div><div class="rank">2</div></div>
+    62|        <div class="content"><h2>North Vancouver</h2><p class="one-liner">Lowest friction: harbor, Stanley Park, rainforest, markets, rainy-day backups.</p><div class="stats"><div class="stat"><b>Total shown</b><span>$1,916</span></div><div class="stat"><b>Home base</b><span>3BR / 2BA</span></div><div class="stat"><b>Dates</b><span>Jul 5–10</span></div><div class="stat"><b>Toddler</b><span>Pack ’n Play</span></div></div><div class="cta-row"><a class="btn red" href="#northvan">Explore</a><a class="btn light" href="https://www.airbnb.com/rooms/1127958109562348096?adults=2&check_in=2026-07-05&check_out=2026-07-10&children=1&search_mode=regular_search">Lodging</a></div></div>
+    63|      </article>
+    64|      <article class="card">
+    65|        <div class="photo"><img src="https://admin.tourismvictoria.com/content/uploads/2023/12/PB-at-Night-bd7e34815056a36_bd7e359f-5056-a36a-0a60267a2a786852.jpg" alt="Victoria Inner Harbour"><div class="badge">Coastal</div><div class="rank">3</div></div>
+    66|        <div class="content"><h2>Sooke + Victoria</h2><p class="one-liner">Best ferry/coast energy: marina, tidepools, beaches, Victoria Inner Harbour.</p><div class="stats"><div class="stat"><b>Total shown</b><span>$2,322</span></div><div class="stat"><b>Home base</b><span>3BR / 3BA</span></div><div class="stat"><b>Dates</b><span>Jul 3–8</span></div><div class="stat"><b>Toddler</b><span>Crib TBD</span></div></div><div class="cta-row"><a class="btn red" href="#sooke">Explore</a><a class="btn light" href="https://truekeyvacations.com/rental/5009/">Lodging</a></div></div>
+    67|      </article>
+    68|    </section>
+    69|
+    70|    <section id="details" class="section">
+    71|      <div class="section-head"><h2>Click into the actual places</h2><p>Direct links to lodging and the main trip anchors.</p></div>
+    72|
+    73|      <article id="squamish" class="trip">
+    74|        <div class="trip-top"><div class="trip-img"><img src="https://www.seatoskygondola.com/site/assets/files/1/sea_to_sky_gonodola_summers.jpg" alt="Stawamus Chief in Squamish"></div><div class="trip-main"><h3>1. Squamish + Whistler</h3><div class="trip-meta"><span class="tag good">Best overall</span><span class="tag">~4.5–6h with border/traffic</span><span class="tag">$2,473 shown</span><span class="tag">4BR · travel crib</span></div><div class="cta-row" style="max-width:460px"><a class="btn red" href="https://www.airbnb.com/rooms/1635753686728824498?adults=2&check_in=2026-07-05&check_out=2026-07-10&children=1&search_mode=regular_search">Open lodging</a><a class="btn light" href="https://www.exploresquamish.com/">Destination site</a></div><div class="poi-grid"><a class="poi" href="https://www.seatoskygondola.com/">Sea to Sky Gondola<small>views + short walks</small></a><a class="poi" href="https://bcparks.ca/shannon-falls-park/">Shannon Falls<small>easy stop</small></a><a class="poi" href="https://bcparks.ca/alice-lake-park/">Alice Lake<small>picnic/lake day</small></a><a class="poi" href="https://www.whistler.com/village/">Whistler Village<small>stroll + food</small></a><a class="poi" href="https://www.whistler.ca/parks-recreation-culture/parks/lost-lake-park/">Lost Lake Park<small>family lake</small></a><a class="poi" href="https://bcparks.ca/nairn-falls-park/">Nairn Falls<small>carrier walk</small></a><a class="poi" href="https://bcparks.ca/brandywine-falls-park/">Brandywine Falls<small>short viewpoint</small></a><a class="poi" href="https://www.drivebc.ca/">DriveBC<small>road check</small></a></div><div class="days"><div class="day"><b>D1</b>Drive + groceries</div><div class="day"><b>D2</b>Gondola</div><div class="day"><b>D3</b>Alice Lake</div><div class="day"><b>D4</b>Whistler</div><div class="day"><b>D5</b>Falls / Pemberton</div><div class="day"><b>D6</b>Home</div></div><div class="note"><strong>Why pick it:</strong>... [truncated]
+    75|      </article>
+    76|
+    77|      <article id="northvan" class="trip">
+    78|        <div class="trip-top"><div class="trip-img"><img src="https://lowerlonsdale.com/llbia/media/Shipyards-3.jpg" alt="Lynn Canyon suspension bridge"></div><div class="trip-main"><h3>2. North Vancouver / Vancouver</h3><div class="trip-meta"><span class="tag good">Easiest toddler logistics</span><span class="tag">~3.5–5h with border</span><span class="tag">$1,916 shown</span><span class="tag">3BR · Pack ’n Play</span></div><div class="cta-row" style="max-width:460px"><a class="btn red" href="https://www.airbnb.com/rooms/1127958109562348096?adults=2&check_in=2026-07-05&check_out=2026-07-10&children=1&search_mode=regular_search">Open lodging</a><a class="btn light" href="https://www.destinationvancouver.com/">Destination site</a></div><div class="poi-grid"><a class="poi" href="https://theshipyardsdistrict.ca/">The Shipyards<small>arrival stroll</small></a><a class="poi" href="https://vancouver.ca/parks-recreation-culture/stanley-park.aspx">Stanley Park<small>seawall + playgrounds</small></a><a class="poi" href="https://www.vanaqua.org/">Vancouver Aquarium<small>weather backup</small></a><a class="poi" href="https://lynncanyon.ca/information/">Lynn Canyon<small>rainforest</small></a><a class="poi" href="https://maplewoodfarm.bc.ca/">Maplewood Farm<small>toddler hit</small></a><a class="poi" href="https://www.grousemountain.com/">Grouse Mountain<small>skyride</small></a><a class="poi" href="https://www.capbridge.com/">Capilano Bridge<small>paid forest attraction</small></a><a class="poi" href="https://granvilleisland.com/">Granville Island<small>market + kids</small></a></div><div class="days"><div class="day"><b>D1</b>Shipyards</div><div class="day"><b>D2</b>Stanley Park</div><div class="day"><b>D3</b>Lynn + Farm</div><div class="day"><b>D4</b>Grouse / Capilano</div><div class="day"><b>D5</b>Granville Island</div><div class="day"><b>D6</b>Home<... [truncated]
+    79|      </article>
+    80|
+    81|      <article id="sooke" class="trip">
+    82|        <div class="trip-top"><div class="trip-img"><img src="https://truekeyvacations.com/wp-content/uploads/IMG_8553.jpg" alt="French Beach on Vancouver Island"></div><div class="trip-main"><h3>3. Sooke + Victoria</h3><div class="trip-meta"><span class="tag good">Best coastal feel</span><span class="tag warn">Ferry-heavy</span><span class="tag">$2,322 shown</span><span class="tag">3BR · 3BA</span></div><div class="cta-row" style="max-width:460px"><a class="btn red" href="https://truekeyvacations.com/rental/5009/">Open lodging</a><a class="btn light" href="https://www.tourismvictoria.com/">Destination site</a></div><div class="poi-grid"><a class="poi" href="https://www.bcferries.com/">BC Ferries<small>reserve first</small></a><a class="poi" href="https://www.sooke.ca/EN/main/parks-recreation-culture/parks-trails/sooke-potholes.html">Sooke Potholes<small>water + rocks</small></a><a class="poi" href="https://www.sooke.ca/EN/main/parks-recreation-culture/parks-trails/whiffin-spit.html">Whiffin Spit<small>flat harbor walk</small></a><a class="poi" href="https://bcparks.ca/east-sooke-park/">East Sooke Park<small>coastal trails</small></a><a class="poi" href="https://bcparks.ca/french-beach-park/">French Beach<small>easy beach</small></a><a class="poi" href="https://www.tourismvictoria.com/see-do/activities-attractions/parks-recreation/beacon-hill-park">Beacon Hill Park<small>Victoria toddler stop</small></a><a class="poi" href="https://gvha.ca/marinas-facilities/inner-harbour/">Inner Harbour<small>stroll</small></a><a class="poi" href="https://www.butchartgardens.com/">Butchart Gardens<small>optional splurge</small></a></div><div class="days"><div class="day"><b>D1</b>Ferry + arrive</div><div class="day"><b>D2</b>Potholes + Spit</div><div class="day"><b>D3</b>East Sooke</div><div class="day"><b>D4</b>Victoria</div><div c... [truncated]
+    83|      </article>
+    84|    </section>
+    85|
+    86|    <section id="compare" class="section">
+    87|      <div class="section-head"><h2>Fast comparison</h2><p>Use this for the family vote.</p></div>
+    88|      <table class="compare"><thead><tr><th>Option</th><th>Best for</th><th>Main tradeoff</th><th>Vote if…</th></tr></thead><tbody><tr><td><strong>Squamish + Whistler</strong></td><td>Most memorable scenery</td><td>Border + Sea-to-Sky traffic</td><td>You want the trip to feel epic.</td></tr><tr><td><strong>North Vancouver</strong></td><td>Ease, food, backups</td><td>Less wilderness-vacation feel</td><td>You want Canada without overcomplicating toddler logistics.</td></tr><tr><td><strong>Sooke + Victoria</strong></td><td>Coast, ferry, harbor</td><td>Most logistics</td><td>You want a real island/coastal vacation.</td></tr></tbody></table>
+    89|    </section>
+    90|  </main>
+    91|
+    92|  <footer class="footer"><div class="wrap">Photos are embedded from official destination/lodging websites where available. Lodging totals are displayed totals from research time and can change. No booking, host contact, calendar event, reminder, or purchase was made.</div></footer>
+    93|</body>
+    94|</html>
+    95|
