@@ -4,245 +4,221 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Family Trip Options</title>
-  <meta name="description" content="Family trip options prioritized for sightseeing, hikes and nature, and culture.">
+  <meta name="description" content="Family trip options within six hours of Kirkland, ranked for nature, daily outdoor activities, and toddler-friendly logistics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
   <style>
-    :root { --cream:#fffaf4; --blush:#f7ece8; --soft:#fbf3ef; --coral:#f4a08a; --rose:#d98b8f; --sage:#a9b7a0; --olive:#4f5b45; --charcoal:#2d2b2c; --muted:#756663; --line:rgba(91,65,58,.18); --white:#fff; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
+    :root { --cream:#fffaf4; --blush:#f7ece8; --soft:#fbf3ef; --coral:#f4a08a; --rose:#d98b8f; --olive:#4f5b45; --charcoal:#2d2b2c; --muted:#756663; --line:rgba(91,65,58,.18); --white:#fff; }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; }
     body { margin:0; background:var(--blush); color:var(--charcoal); font-family:"Newsreader", Georgia, serif; font-size:18px; line-height:1.55; }
-    a { color:inherit; }
-    img { max-width:100%; display:block; }
+    a { color:inherit; } img { max-width:100%; display:block; }
     .nav { position:sticky; top:0; z-index:20; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.9rem clamp(1rem,4vw,3rem); background:rgba(255,250,244,.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.14em; font-size:.72rem; }
-    .nav strong { font-family:"Newsreader",Georgia,serif; text-transform:none; letter-spacing:.03em; font-size:1.25rem; font-weight:500; }
-    .nav div { display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:flex-end; }
-    .nav a { text-decoration:none; }
-    .hero { min-height:72vh; display:grid; place-items:center; text-align:center; color:white; padding:6rem 1.25rem; background:linear-gradient(rgba(45,43,44,.54), rgba(45,43,44,.38)), url('https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg') center/cover; }
-    .hero-inner { max-width:920px; }
-    .eyebrow { font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:700; margin:0 0 .8rem; color:var(--olive); }
-    .hero .eyebrow { color:#ffe8dd; }
-    h1,h2,h3 { font-weight:400; line-height:1.02; letter-spacing:-.025em; margin:0; }
-    h1 { font-size:clamp(3.4rem,9vw,8rem); }
-    h2 { font-size:clamp(2.2rem,5vw,4.5rem); }
-    h3 { font-size:clamp(1.6rem,3vw,2.35rem); }
-    .hero p:not(.eyebrow) { max-width:660px; margin:1.2rem auto 0; font-size:clamp(1.15rem,2vw,1.45rem); }
-    .cta-row { margin-top:2rem; display:flex; gap:.9rem; justify-content:center; flex-wrap:wrap; }
-    .cta { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:.9rem 1.45rem; text-decoration:none; border:1px solid currentColor; font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.14em; font-size:.72rem; font-weight:700; }
-    .cta.primary { background:var(--coral); border-color:var(--coral); color:#fff; }
-    .cta.secondary { color:#fff; }
+    .nav strong { font-family:"Newsreader",Georgia,serif; text-transform:none; letter-spacing:.03em; font-size:1.25rem; font-weight:500; } .nav div { display:flex; gap:1.1rem; flex-wrap:wrap; justify-content:flex-end; } .nav a { text-decoration:none; }
+    .hero { min-height:68vh; display:grid; place-items:center; text-align:center; color:white; padding:6rem 1.25rem; background:linear-gradient(rgba(45,43,44,.58), rgba(45,43,44,.4)), url('https://www.nps.gov/common/uploads/banner_image/pwr/homepage/24B35902-92B6-77CA-0C35FCF526C94819.jpg') center/cover; }
+    .hero-inner { max-width:940px; } .eyebrow { font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:700; margin:0 0 .8rem; color:var(--olive); } .hero .eyebrow { color:#ffe8dd; }
+    h1,h2,h3 { font-weight:400; line-height:1.02; letter-spacing:-.025em; margin:0; } h1 { font-size:clamp(3.4rem,9vw,8rem); } h2 { font-size:clamp(2.2rem,5vw,4.5rem); } h3 { font-size:clamp(1.45rem,3vw,2.35rem); }
+    .hero p:not(.eyebrow) { max-width:720px; margin:1.2rem auto 0; font-size:clamp(1.15rem,2vw,1.45rem); } .cta-row { margin-top:2rem; display:flex; gap:.9rem; justify-content:center; flex-wrap:wrap; }
+    .cta { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:.9rem 1.45rem; text-decoration:none; border:1px solid currentColor; font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.14em; font-size:.72rem; font-weight:700; } .cta.primary { background:var(--coral); border-color:var(--coral); color:#fff; } .cta.secondary { color:#fff; }
     .strip { display:flex; justify-content:center; gap:clamp(1rem,5vw,5rem); flex-wrap:wrap; padding:1.1rem; background:var(--cream); border-bottom:1px solid var(--line); font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.14em; font-size:.72rem; font-weight:700; }
-    main { overflow:hidden; }
-    .verdict { max-width:1120px; margin:clamp(3rem,7vw,6rem) auto; padding:clamp(2rem,5vw,4rem); background:var(--cream); border:1px solid var(--line); text-align:center; position:relative; }
-    .verdict:before { content:"✦"; position:absolute; top:-1.4rem; left:50%; transform:translateX(-50%); background:var(--blush); color:var(--coral); font-size:2rem; padding:0 1rem; }
-    .priority { display:flex; justify-content:center; gap:.6rem; flex-wrap:wrap; margin:1.5rem 0 0; }
-    .priority span { background:var(--soft); border:1px solid var(--line); padding:.55rem .75rem; font-family:Inter,system-ui,sans-serif; font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; }
-    .verdict .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; text-align:left; }
-    .mini { padding:1.2rem; background:var(--soft); border:1px solid var(--line); }
-    .mini strong { display:block; font-family:Inter,system-ui,sans-serif; font-size:.75rem; text-transform:uppercase; letter-spacing:.13em; color:var(--olive); margin-bottom:.4rem; }
-    .cards { max-width:1240px; margin:0 auto; padding:0 clamp(1rem,4vw,3rem) clamp(3rem,6vw,5rem); display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; align-items:stretch; }
-    .destination-card { background:var(--cream); border:1px solid var(--line); }
-    .photo-wrap { position:relative; overflow:hidden; }
-    .photo-wrap img { width:100%; aspect-ratio:4/5; object-fit:cover; filter:saturate(.95) contrast(.96); transition:transform .4s ease; }
-    .destination-card:hover img { transform:scale(1.035); }
-    .rank,.country { position:absolute; top:.75rem; font-family:Inter,system-ui,sans-serif; font-weight:700; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:rgba(255,250,244,.9); color:var(--charcoal); padding:.45rem .6rem; }
-    .rank { right:.75rem; } .country { left:.75rem; }
-    .card-body { padding:1.1rem; }
-    .card-body p { margin:.75rem 0; color:var(--muted); font-size:1rem; }
-    .facts,.scores { display:flex; flex-wrap:wrap; gap:.45rem; margin:1rem 0; }
-    .facts span,.scores span { font-family:Inter,system-ui,sans-serif; font-size:.72rem; font-weight:700; padding:.35rem .55rem; background:#fff; border:1px solid var(--line); }
-    .scores span { background:var(--soft); color:var(--olive); }
-    .text-link { font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.13em; font-size:.72rem; font-weight:700; color:var(--olive); }
-    .interlude { min-height:46vh; display:grid; place-items:center; text-align:center; padding:5rem 1rem; background:linear-gradient(rgba(247,236,232,.58), rgba(247,236,232,.78)), url('https://visittheoregoncoast.com/wp-content/uploads/2020/08/img-city-card-manzanita.jpg') center/cover fixed; }
-    .interlude div { max-width:780px; background:rgba(255,250,244,.82); padding:clamp(2rem,5vw,4rem); }
-    .details-wrap { padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,3rem); background:var(--cream); }
-    .destination-detail { max-width:1220px; margin:0 auto 2rem; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.85fr); gap:1.25rem; padding:clamp(1.5rem,4vw,3rem); background:var(--soft); border:1px solid var(--line); }
-    .lead { font-size:1.25rem; color:var(--olive); }
-    .anchor-links { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1.2rem; }
-    .anchor-links a { text-decoration:none; font-family:Inter,system-ui,sans-serif; font-size:.78rem; font-weight:700; background:#fff; border:1px solid var(--line); padding:.55rem .7rem; }
-    .lodging-panel,.day-panel { background:#fff; border:1px solid var(--line); padding:1.2rem; }
-    .lodging-panel p { color:var(--muted); font-size:1rem; }
-    .lodging-link { display:flex; justify-content:space-between; gap:1rem; align-items:center; padding:.75rem 0; border-top:1px solid var(--line); text-decoration:none; font-family:Inter,system-ui,sans-serif; font-weight:700; font-size:.85rem; }
-    .lodging-link em { color:var(--rose); font-style:normal; text-transform:uppercase; letter-spacing:.12em; font-size:.68rem; }
-    .day-panel { grid-column:1 / -1; }
-    .day-panel ol { display:grid; grid-template-columns:repeat(5,1fr); gap:.75rem; padding:0; margin:.8rem 0 0; list-style:none; }
-    .day-panel li { background:var(--cream); border:1px solid var(--line); padding:.9rem; }
-    .compare { padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,3rem); background:var(--blush); }
-    .compare-inner { max-width:1220px; margin:auto; }
-    .table-wrap { overflow:auto; background:var(--cream); border:1px solid var(--line); }
-    table { width:100%; border-collapse:collapse; min-width:920px; }
-    th,td { padding:1rem; border-bottom:1px solid var(--line); vertical-align:top; }
-    th { text-align:left; font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.13em; font-size:.72rem; color:var(--olive); background:#fff; }
-    td:first-child { font-weight:600; }
-    .pillars { display:grid; grid-template-columns:1fr 1fr; gap:2rem; max-width:1120px; margin:0 auto; padding:clamp(3rem,7vw,6rem) clamp(1rem,4vw,3rem); }
-    .pillar-copy { background:var(--cream); border:1px solid var(--line); padding:clamp(2rem,5vw,4rem); }
-    .pillar-copy ul { margin:1.2rem 0 0; padding-left:1.2rem; }
-    .pillar-art { min-height:420px; background:linear-gradient(rgba(45,43,44,.08), rgba(45,43,44,.02)), url('https://www.nps.gov/olym/planyourvisit/images/hr-meadow.jpg') center/cover; }
-
-    .cabin-section { padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,3rem); background:var(--cream); }
-    .cabin-inner { max-width:1220px; margin:auto; }
-    .cabin-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1.5rem; }
-    .cabin-card { background:var(--soft); border:1px solid var(--line); padding:clamp(1.2rem,3vw,2rem); }
-    .cabin-card h3 { margin-bottom:.6rem; }
-    .cabin-card p { color:var(--muted); margin:.55rem 0; }
-    .cabin-card .links { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0; }
-    .cabin-card .links a { text-decoration:none; font-family:Inter,system-ui,sans-serif; font-size:.78rem; font-weight:700; background:#fff; border:1px solid var(--line); padding:.55rem .7rem; }
-    .cabin-lodging { display:grid; gap:.35rem; margin-top:1rem; }
-    .cabin-lodging a { display:flex; justify-content:space-between; gap:1rem; text-decoration:none; border-top:1px solid var(--line); padding:.6rem 0; font-family:Inter,system-ui,sans-serif; font-size:.82rem; font-weight:700; }
-    .cabin-lodging em { color:var(--rose); font-style:normal; text-transform:uppercase; letter-spacing:.12em; font-size:.68rem; }
-    footer { background:var(--charcoal); color:#fff; text-align:center; padding:3rem 1rem; }
-    footer p { margin:.25rem auto; max-width:800px; color:#eadad5; }
-    @media (max-width:900px) { .nav { align-items:flex-start; } .cards,.verdict .grid,.day-panel ol,.pillars { grid-template-columns:1fr; } .destination-detail { grid-template-columns:1fr; } .hero { min-height:62vh; } }
+    main { overflow:hidden; } .verdict { max-width:1120px; margin:clamp(3rem,7vw,6rem) auto; padding:clamp(2rem,5vw,4rem); background:var(--cream); border:1px solid var(--line); text-align:center; position:relative; } .verdict:before { content:"✦"; position:absolute; top:-1.4rem; left:50%; transform:translateX(-50%); background:var(--blush); color:var(--coral); font-size:2rem; padding:0 1rem; }
+    .priority { display:flex; justify-content:center; gap:.6rem; flex-wrap:wrap; margin:1.5rem 0 0; } .priority span { background:var(--soft); border:1px solid var(--line); padding:.55rem .75rem; font-family:Inter,system-ui,sans-serif; font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; }
+    .verdict .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; text-align:left; } .mini { padding:1.2rem; background:var(--soft); border:1px solid var(--line); } .mini strong { display:block; font-family:Inter,system-ui,sans-serif; font-size:.75rem; text-transform:uppercase; letter-spacing:.13em; color:var(--olive); margin-bottom:.4rem; }
+    .cards { max-width:1320px; margin:0 auto; padding:0 clamp(1rem,4vw,3rem) clamp(3rem,6vw,5rem); display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; align-items:stretch; } .destination-card { background:var(--cream); border:1px solid var(--line); } .photo-wrap { position:relative; overflow:hidden; } .photo-wrap img { width:100%; aspect-ratio:4/5; object-fit:cover; filter:saturate(.95) contrast(.96); transition:transform .4s ease; } .destination-card:hover img { transform:scale(1.035); }
+    .rank,.country { position:absolute; top:.75rem; font-family:Inter,system-ui,sans-serif; font-weight:700; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:rgba(255,250,244,.9); color:var(--charcoal); padding:.45rem .6rem; } .rank { right:.75rem; } .country { left:.75rem; }
+    .card-body { padding:1.1rem; } .card-body p { margin:.75rem 0; color:var(--muted); font-size:1rem; } .facts,.scores { display:flex; flex-wrap:wrap; gap:.45rem; margin:1rem 0; } .facts span,.scores span { font-family:Inter,system-ui,sans-serif; font-size:.72rem; font-weight:700; padding:.35rem .55rem; background:#fff; border:1px solid var(--line); } .scores span { background:var(--soft); color:var(--olive); } .text-link { font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.13em; font-size:.72rem; font-weight:700; color:var(--olive); }
+    .interlude { min-height:42vh; display:grid; place-items:center; text-align:center; padding:5rem 1rem; background:linear-gradient(rgba(247,236,232,.58), rgba(247,236,232,.78)), url('https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/mbs/image/MtBakerHighwayfromWildGooseTrail_Fall.JPG?h=1883f97d&itok=_f6VXr8y') center/cover fixed; } .interlude div { max-width:820px; background:rgba(255,250,244,.86); padding:clamp(2rem,5vw,4rem); }
+    .details-wrap { padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,3rem); background:var(--cream); } .destination-detail { max-width:1220px; margin:0 auto 2rem; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.85fr); gap:1.25rem; padding:clamp(1.5rem,4vw,3rem); background:var(--soft); border:1px solid var(--line); } .lead { font-size:1.25rem; color:var(--olive); }
+    .anchor-links { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1.2rem; } .anchor-links a { text-decoration:none; font-family:Inter,system-ui,sans-serif; font-size:.78rem; font-weight:700; background:#fff; border:1px solid var(--line); padding:.55rem .7rem; } .lodging-panel,.day-panel { background:#fff; border:1px solid var(--line); padding:1.2rem; } .lodging-panel p { color:var(--muted); font-size:1rem; } .lodging-link { display:flex; justify-content:space-between; gap:1rem; align-items:center; padding:.75rem 0; border-top:1px solid var(--line); text-decoration:none; font-family:Inter,system-ui,sans-serif; font-weight:700; font-size:.85rem; } .lodging-link em { color:var(--rose); font-style:normal; text-transform:uppercase; letter-spacing:.12em; font-size:.68rem; }
+    .day-panel { grid-column:1 / -1; } .day-panel ol { display:grid; grid-template-columns:repeat(5,1fr); gap:.75rem; padding:0; margin:.8rem 0 0; list-style:none; } .day-panel li { background:var(--cream); border:1px solid var(--line); padding:.9rem; }
+    .compare { padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,3rem); background:var(--blush); } .compare-inner { max-width:1220px; margin:auto; } .table-wrap { overflow:auto; background:var(--cream); border:1px solid var(--line); } table { width:100%; border-collapse:collapse; min-width:980px; } th,td { padding:1rem; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; font-family:Inter,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.13em; font-size:.72rem; color:var(--olive); background:#fff; } td:first-child { font-weight:600; }
+    .pillars { display:grid; grid-template-columns:1fr 1fr; gap:2rem; max-width:1120px; margin:0 auto; padding:clamp(3rem,7vw,6rem) clamp(1rem,4vw,3rem); } .pillar-copy { background:var(--cream); border:1px solid var(--line); padding:clamp(2rem,5vw,4rem); } .pillar-copy ul { margin:1.2rem 0 0; padding-left:1.2rem; } .pillar-art { min-height:420px; background:linear-gradient(rgba(45,43,44,.08), rgba(45,43,44,.02)), url('https://www.nps.gov/common/uploads/grid_builder/olym/crop16_9/652AE28F-C5BF-A065-AC3D5124FFED6D62.jpg?width=640&quality=90&mode=crop') center/cover; }
+    footer { background:var(--charcoal); color:#fff; text-align:center; padding:3rem 1rem; } footer p { margin:.25rem auto; max-width:860px; color:#eadad5; }
+    @media (max-width:1050px) { .cards { grid-template-columns:repeat(2,1fr); } .day-panel ol { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:760px) { .nav { align-items:flex-start; } .cards,.verdict .grid,.pillars,.destination-detail,.day-panel ol { grid-template-columns:1fr; } .hero { min-height:62vh; } }
   </style>
 </head>
 <body>
-  <header class="nav"><strong>Family Trip Options</strong><div><a href="#verdict">Verdict</a><a href="#destinations">Destinations</a><a href="#details">Lodging</a><a href="#cabins">Cabins</a><a href="#compare">Compare</a></div></header>
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">July family trip</p>
-      <h1>Family trip options.</h1>
-      <p>Prioritized for great sightseeing, great hikes and nature, and great culture.</p>
-      <div class="cta-row"><a class="cta primary" href="#destinations">See options</a><a class="cta secondary" href="#compare">Compare</a></div>
-    </div>
-  </section>
-  <nav class="strip"><a href="#verdict">Quick verdict</a><a href="#destinations">Destinations</a><a href="#details">Lodging</a><a href="#cabins">Cabin ideas</a><a href="#compare">Comparison</a></nav>
+  <header class="nav"><strong>Family Trip Options</strong><div><a href="#verdict">Verdict</a><a href="#destinations">Options</a><a href="#details">Itineraries</a><a href="#compare">Compare</a></div></header>
+  <section class="hero"><div class="hero-inner"><p class="eyebrow">Within six hours of Kirkland</p><h1>Family trip options.</h1><p>Re-ranked for nature, daily outdoor activities, and easy toddler/group logistics.</p><div class="cta-row"><a class="cta primary" href="#destinations">See ranked options</a><a class="cta secondary" href="#compare">Compare</a></div></div></section>
+  <nav class="strip"><a href="#verdict">Quick verdict</a><a href="#destinations">Ranked options</a><a href="#details">Daily rhythm</a><a href="#compare">Comparison</a></nav>
   <main>
-    <section class="verdict" id="verdict">
-      <p class="eyebrow">Ranking lens</p>
-      <h2>Ranked by what matters most.</h2>
-      <p>Pack-and-play comes with us. Lodging just needs <strong>minimum three bedrooms</strong>, good location, workable budget, and enough floor space.</p>
-      <div class="priority"><span>1 · Great sightseeing</span><span>2 · Hikes + nature</span><span>3 · Culture</span></div>
-      <div class="grid">
-        <div class="mini"><strong>Best overall</strong>Sooke + Victoria has the strongest sightseeing/culture mix while still keeping coastal nature.</div>
-        <div class="mini"><strong>Most flexible</strong>North Vancouver / Vancouver is easiest for culture, kid activities, groceries, and weather backups.</div>
-        <div class="mini"><strong>Best scenery</strong>Squamish + Whistler wins on mountain views and nature, with less culture than the top two.</div>
-      </div>
-    </section>
+    <section class="verdict" id="verdict"><p class="eyebrow">Ranking lens</p><h2>Nature first, with something outside to do every day.</h2><p>Every option below is kept within roughly six hours of driving from Kirkland under normal routing. Border, ferry, holiday traffic, and park-entry systems still need buffers.</p><div class="priority"><span>1 · Nature + natural sightseeing</span><span>2 · Daily outdoor activity</span><span>3 · Toddler + multi-car logistics</span></div><div class="grid"><div class="mini"><strong>Best overall</strong>Olympic Peninsula gives the strongest daily outdoor variety without border logistics.</div><div class="mini"><strong>Best mountain payoff</strong>Mount Rainier and Squamish have the biggest scenery, but both require more operational discipline.</div><div class="mini"><strong>Easiest cabin brief</strong>Hood Canal + Lake Cushman is the easiest waterfront/lake/mountain cabin trip.</div></div></section>
     <section id="destinations" class="cards">
-<article class="destination-card" id="card-sooke">
-  <div class="photo-wrap"><img src="https://admin.tourismvictoria.com/content/uploads/2023/12/PB-at-Night-bd7e34815056a36_bd7e359f-5056-a36a-0a60267a2a786852.jpg" alt="Sooke + Victoria destination photo"><span class="rank">01</span><span class="country">Canada</span></div>
+<article class="destination-card" id="card-olympic">
+  <div class="photo-wrap"><img src="https://www.nps.gov/common/uploads/banner_image/pwr/homepage/24B35902-92B6-77CA-0C35FCF526C94819.jpg" alt="Olympic Peninsula destination photo"><span class="rank">01</span><span class="country">Washington</span></div>
   <div class="card-body">
-    <p class="eyebrow">Best sightseeing + culture balance</p>
-    <h3>Sooke + Victoria</h3>
-    <p>Ferry approach, Inner Harbour, gardens, beaches, tidepools, and a real coastal-city vacation feel.</p>
-    <div class="facts"><span>Jul 3–8 or Jul 5–10</span><span>Ferry + ~5–6h total</span><span>3BR+ lodging pool</span></div>
-    <div class="scores"><span>Sightseeing ★★★★★</span><span>Nature ★★★★☆</span><span>Culture ★★★★★</span></div>
-    <a class="text-link" href="#dest-sooke">Explore destination</a>
+    <p class="eyebrow">Best overall nature + daily variety</p>
+    <h3>Olympic Peninsula</h3>
+    <p>National-park scale without border logistics: alpine views, lake days, waterfall hikes, tidepools, and wildlife refuge options.</p>
+    <div class="facts"><span>~3–4.5h from Kirkland; ferry optional but not required</span><span>Within 6h: Yes</span></div>
+    <div class="scores"><span>Nature ★★★★★</span><span>Daily activities ★★★★★</span><span>Logistics ★★★★☆</span></div>
+    <a class="text-link" href="#dest-olympic">Itinerary + lodging</a>
   </div>
 </article>
 
-<article class="destination-card" id="card-vancouver">
-  <div class="photo-wrap"><img src="https://images.spaicelabs.com/images/flus6j8v/production/d647b667df3ec3090386f302bd28fd087e257633-3340x1726.png?rect=26,0,3288,1726&amp;w=1200&amp;h=630" alt="North Vancouver / Vancouver destination photo"><span class="rank">02</span><span class="country">Canada</span></div>
+<article class="destination-card" id="card-rainier">
+  <div class="photo-wrap"><img src="https://www.nps.gov/common/uploads/banner_image/pwr/homepage/EFEE6DC6-1DD8-B71B-0B9A2188BE6539A9.jpg" alt="Mount Rainier cabin base destination photo"><span class="rank">02</span><span class="country">Washington</span></div>
   <div class="card-body">
-    <p class="eyebrow">Best culture with easy nature</p>
-    <h3>North Vancouver / Vancouver</h3>
-    <p>Harbor views, rainforest bridges, Stanley Park, markets, aquarium, food, and rainy-day backups in one easy base.</p>
-    <div class="facts"><span>Jul 5–10</span><span>~3–4.5h + border</span><span>3BR+ lodging pool</span></div>
-    <div class="scores"><span>Sightseeing ★★★★★</span><span>Nature ★★★★☆</span><span>Culture ★★★★★</span></div>
-    <a class="text-link" href="#dest-vancouver">Explore destination</a>
+    <p class="eyebrow">Best iconic national-park scenery</p>
+    <h3>Mount Rainier cabin base</h3>
+    <p>Huge mountain payoff close to home: Paradise meadows, waterfalls, old-growth forest, scenic drives, and cabin downtime.</p>
+    <div class="facts"><span>~2.5–3.5h from Kirkland depending base</span><span>Within 6h: Yes</span></div>
+    <div class="scores"><span>Nature ★★★★★</span><span>Daily activities ★★★★☆</span><span>Logistics ★★★☆☆</span></div>
+    <a class="text-link" href="#dest-rainier">Itinerary + lodging</a>
   </div>
 </article>
 
 <article class="destination-card" id="card-squamish">
-  <div class="photo-wrap"><img src="https://www.seatoskygondola.com/site/assets/files/1/sea_to_sky_gonodola_summers.jpg" alt="Squamish + Whistler destination photo"><span class="rank">03</span><span class="country">Canada</span></div>
+  <div class="photo-wrap"><img src="https://www.exploresquamish.com/site/assets/files/1/website_lead_image.jpg" alt="Squamish + Whistler destination photo"><span class="rank">03</span><span class="country">British Columbia</span></div>
   <div class="card-body">
-    <p class="eyebrow">Best mountain sightseeing</p>
+    <p class="eyebrow">Best pure nature payoff</p>
     <h3>Squamish + Whistler</h3>
-    <p>Sea-to-Sky drama: Howe Sound, gondola views, lakes, waterfalls, and a Whistler day.</p>
-    <div class="facts"><span>Jul 5–10</span><span>~3.5–5h + border</span><span>3BR+ lodging pool</span></div>
-    <div class="scores"><span>Sightseeing ★★★★★</span><span>Nature ★★★★★</span><span>Culture ★★★☆☆</span></div>
-    <a class="text-link" href="#dest-squamish">Explore destination</a>
+    <p>Fjord views, gondola, waterfalls, lakes, alpine village day, and enough outdoor variety to fill every day easily.</p>
+    <div class="facts"><span>~4–5.5h from Kirkland with border buffer</span><span>Within 6h: Yes, with border buffer</span></div>
+    <div class="scores"><span>Nature ★★★★★</span><span>Daily activities ★★★★★</span><span>Logistics ★★★☆☆</span></div>
+    <a class="text-link" href="#dest-squamish">Itinerary + lodging</a>
   </div>
 </article>
 
-<article class="destination-card" id="card-oregon">
-  <div class="photo-wrap"><img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg" alt="North Oregon Coast destination photo"><span class="rank">04</span><span class="country">United States</span></div>
+<article class="destination-card" id="card-hood-canal">
+  <div class="photo-wrap"><img src="https://images.squarespace-cdn.com/content/v1/54e38997e4b088e215649b05/1591643563148-NPD9AYBVDQ2MWSBANLPK/DSCN7841.JPG" alt="Hood Canal + Lake Cushman destination photo"><span class="rank">04</span><span class="country">Washington</span></div>
   <div class="card-body">
-    <p class="eyebrow">Best U.S. vacation feel</p>
+    <p class="eyebrow">Easiest waterfront cabin trip</p>
+    <h3>Hood Canal + Lake Cushman</h3>
+    <p>The most on-brief cabin option: canal, lake, Olympic foothills, easy state parks, oysters, and low drive friction.</p>
+    <div class="facts"><span>~2–3h from Kirkland</span><span>Within 6h: Yes</span></div>
+    <div class="scores"><span>Nature ★★★★☆</span><span>Daily activities ★★★★☆</span><span>Logistics ★★★★★</span></div>
+    <a class="text-link" href="#dest-hood-canal">Itinerary + lodging</a>
+  </div>
+</article>
+
+<article class="destination-card" id="card-baker">
+  <div class="photo-wrap"><img src="https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/mbs/image/MtBakerHighwayfromWildGooseTrail_Fall.JPG?h=1883f97d&amp;itok=_f6VXr8y" alt="Mount Baker / Glacier destination photo"><span class="rank">05</span><span class="country">Washington</span></div>
+  <div class="card-body">
+    <p class="eyebrow">Best mountain-cabin feel</p>
+    <h3>Mount Baker / Glacier</h3>
+    <p>True river-and-mountain cabin energy with Picture Lake, Heather Meadows, waterfalls, forest roads, and North Cascades atmosphere.</p>
+    <div class="facts"><span>~2.5–3.5h from Kirkland</span><span>Within 6h: Yes</span></div>
+    <div class="scores"><span>Nature ★★★★★</span><span>Daily activities ★★★★☆</span><span>Logistics ★★★☆☆</span></div>
+    <a class="text-link" href="#dest-baker">Itinerary + lodging</a>
+  </div>
+</article>
+
+<article class="destination-card" id="card-hood-river">
+  <div class="photo-wrap"><img src="https://visithoodriver.com/wp-content/uploads/2020/10/IMG_3920.jpg" alt="Hood River + Columbia Gorge destination photo"><span class="rank">06</span><span class="country">Oregon</span></div>
+  <div class="card-body">
+    <p class="eyebrow">Best river + waterfall activity week</p>
+    <h3>Hood River + Columbia Gorge</h3>
+    <p>River, waterfalls, cliffs, orchards, waterfront parks, and enough outdoor stops to keep every day distinct.</p>
+    <div class="facts"><span>~4.5–5.5h from Kirkland</span><span>Within 6h: Yes</span></div>
+    <div class="scores"><span>Nature ★★★★☆</span><span>Daily activities ★★★★★</span><span>Logistics ★★★☆☆</span></div>
+    <a class="text-link" href="#dest-hood-river">Itinerary + lodging</a>
+  </div>
+</article>
+
+<article class="destination-card" id="card-oregon-coast">
+  <div class="photo-wrap"><img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg" alt="North Oregon Coast destination photo"><span class="rank">07</span><span class="country">Oregon</span></div>
+  <div class="card-body">
+    <p class="eyebrow">Best beach + tidepool nature</p>
     <h3>North Oregon Coast</h3>
-    <p>Manzanita/Cannon Beach gives beach vacation energy: sand, tidepools, headlands, cheese stop, and no border crossing.</p>
-    <div class="facts"><span>Jul 5–10</span><span>~4.5–6h</span><span>3BR+ lodging pool</span></div>
-    <div class="scores"><span>Sightseeing ★★★★☆</span><span>Nature ★★★★★</span><span>Culture ★★★☆☆</span></div>
-    <a class="text-link" href="#dest-oregon">Explore destination</a>
+    <p>Beach vacation energy with tidepools, headlands, forests, sand, and easy outdoor days once you are there.</p>
+    <div class="facts"><span>~5–6h from Kirkland</span><span>Within 6h: Yes, but holiday traffic can be tight</span></div>
+    <div class="scores"><span>Nature ★★★★☆</span><span>Daily activities ★★★★☆</span><span>Logistics ★★★☆☆</span></div>
+    <a class="text-link" href="#dest-oregon-coast">Itinerary + lodging</a>
   </div>
 </article>
 
-<article class="destination-card" id="card-olympic">
-  <div class="photo-wrap"><img src="https://www.nps.gov/olym/planyourvisit/images/Lake_Crescent_reflection_cloud_water_wharf_2016_cbubar-700.jpg" alt="Olympic Peninsula destination photo"><span class="rank">05</span><span class="country">United States</span></div>
+<article class="destination-card" id="card-vancouver">
+  <div class="photo-wrap"><img src="https://images.spaicelabs.com/images/flus6j8v/production/d647b667df3ec3090386f302bd28fd087e257633-3340x1726.png?rect=26,0,3288,1726&amp;w=1200&amp;h=630" alt="North Vancouver / Vancouver destination photo"><span class="rank">08</span><span class="country">British Columbia</span></div>
   <div class="card-body">
-    <p class="eyebrow">Best U.S. nature base</p>
-    <h3>Olympic Peninsula</h3>
-    <p>Port Angeles/Sequim base for Olympic National Park: Hurricane Ridge, Lake Crescent, Marymere Falls, and wildlife refuge.</p>
-    <div class="facts"><span>Jul 5–10</span><span>~3–4.5h; ferry optional</span><span>3BR+ lodging pool</span></div>
-    <div class="scores"><span>Sightseeing ★★★★☆</span><span>Nature ★★★★★</span><span>Culture ★★☆☆☆</span></div>
-    <a class="text-link" href="#dest-olympic">Explore destination</a>
+    <p class="eyebrow">Best outdoor-city backup</p>
+    <h3>North Vancouver / Vancouver</h3>
+    <p>Plenty of outdoor activities—Stanley Park, Lynn Canyon, waterfronts, aquarium, mountain viewpoints—but it is still a city trip.</p>
+    <div class="facts"><span>~3–4.5h from Kirkland with border buffer</span><span>Within 6h: Yes</span></div>
+    <div class="scores"><span>Nature ★★★★☆</span><span>Daily activities ★★★★★</span><span>Logistics ★★★☆☆</span></div>
+    <a class="text-link" href="#dest-vancouver">Itinerary + lodging</a>
+  </div>
+</article>
+
+<article class="destination-card" id="card-sooke">
+  <div class="photo-wrap"><img src="https://admin.tourismvictoria.com/content/uploads/2023/12/PB-at-Night-bd7e34815056a36_bd7e359f-5056-a36a-0a60267a2a786852.jpg" alt="Sooke + Victoria destination photo"><span class="rank">09</span><span class="country">British Columbia</span></div>
+  <div class="card-body">
+    <p class="eyebrow">Great coast, hardest logistics</p>
+    <h3>Sooke + Victoria</h3>
+    <p>Excellent coastal nature and daily options—potholes, beaches, gardens, harbor, tidepools—but ferry timing makes it the least easy.</p>
+    <div class="facts"><span>~5.5–6h from Kirkland with ferry/border buffers</span><span>Within 6h: Borderline; keep only with ferry reservations</span></div>
+    <div class="scores"><span>Nature ★★★★☆</span><span>Daily activities ★★★★★</span><span>Logistics ★★☆☆☆</span></div>
+    <a class="text-link" href="#dest-sooke">Itinerary + lodging</a>
   </div>
 </article></section>
-    <section class="interlude"><div><p class="eyebrow">Decision lens</p><h2>Sightseeing first. Nature second. Culture third.</h2><p>The lodging is backup proof for each destination, not the thing we are choosing around.</p></div></section>
+    <section class="interlude"><div><p class="eyebrow">Infant + family group assumption</p><h2>One outdoor anchor per day.</h2><p>Use stroller-friendly viewpoints where possible, the Osprey backpack for hikes, and split cars when stronger hikers want an extension while others keep the day easy.</p></div></section>
     <div class="details-wrap" id="details">
-<section class="destination-detail" id="dest-sooke">
+<section class="destination-detail" id="dest-olympic">
   <div class="detail-copy">
-    <p class="eyebrow">01 · Canada · Best sightseeing + culture balance</p>
-    <h2>Sooke + Victoria</h2>
-    <p class="lead">Best overall under the new priorities: strongest sightseeing, strong nature days, and the best culture layer through Victoria.</p>
-    <p>This ranks first because it has the broadest family appeal: ferry ritual, Inner Harbour, Butchart Gardens, coastal parks, beaches, tidepools, and easy town time when toddler energy runs low.</p>
-    <div class="anchor-links"><a href="https://www.tourismvictoria.com/" target="_blank" rel="noopener">Tourism Victoria</a>
-<a href="https://www.bcferries.com/" target="_blank" rel="noopener">BC Ferries</a>
-<a href="https://www.sooke.ca/EN/main/parks-recreation-culture/parks-trails/sooke-potholes.html" target="_blank" rel="noopener">Sooke Potholes</a>
-<a href="https://www.sooke.ca/EN/main/parks-recreation-culture/parks-trails/whiffin-spit.html" target="_blank" rel="noopener">Whiffin Spit</a>
-<a href="https://bcparks.ca/east-sooke-park/" target="_blank" rel="noopener">East Sooke Park</a>
-<a href="https://bcparks.ca/french-beach-park/" target="_blank" rel="noopener">French Beach</a>
-<a href="https://www.butchartgardens.com/" target="_blank" rel="noopener">Butchart Gardens</a></div>
+    <p class="eyebrow">01 · Washington · Port Angeles / Sequim base · Within 6h: Yes</p>
+    <h2>Olympic Peninsula</h2>
+    <p class="lead">National-park scale without border logistics: alpine views, lake days, waterfall hikes, tidepools, and wildlife refuge options.</p>
+    <p><strong>Toddler / group fit:</strong> Best car-based rhythm: stay in Port Angeles or Sequim, do one outdoor anchor each day, use stroller for waterfront/refuge segments and Osprey for Hurricane Ridge/Lake Crescent trails.</p>
+    <p><strong>Tradeoff:</strong> Ferry can be scenic but adds timing risk; driving around keeps logistics easiest for two or three cars.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Hurricane Hill if conditions/logistics fit.</p>
+    <div class="anchor-links"><a href="https://www.nps.gov/olym/index.htm" target="_blank" rel="noopener">Olympic National Park</a>
+<a href="https://www.nps.gov/olym/planyourvisit/visiting-hurricane-ridge.htm" target="_blank" rel="noopener">Hurricane Ridge</a>
+<a href="https://www.nps.gov/olym/planyourvisit/visiting-lake-crescent.htm" target="_blank" rel="noopener">Lake Crescent</a>
+<a href="https://www.nps.gov/places/000/marymere-falls-trailhead.htm" target="_blank" rel="noopener">Marymere Falls</a>
+<a href="https://www.fws.gov/refuge/dungeness" target="_blank" rel="noopener">Dungeness Refuge</a>
+<a href="https://www.clallamcountywa.gov/Facilities/Facility/Details/Salt-Creek-Recreation-Area-19" target="_blank" rel="noopener">Salt Creek Recreation Area</a></div>
   </div>
   <div class="lodging-panel">
-    <p class="eyebrow">Lodging</p>
-    <h3>3BR+ options</h3>
-    <p>We can bring our own pack-and-play, so the lodging screen is bedroom count, location, budget, and enough floor space.</p>
-    <a class="lodging-link" href="https://truekeyvacations.com/rental/5009/" target="_blank" rel="noopener"><span>Primary True Key rental</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.airbnb.com/s/Sooke--British-Columbia--Canada/homes?checkin=2026-07-03&amp;checkout=2026-07-08&amp;min_bedrooms=3&amp;room_types%5B%5D=Entire%20home%2Fapt" target="_blank" rel="noopener"><span>Airbnb 3BR Sooke search</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.vrbo.com/search?destination=Victoria%2C%20British%20Columbia%2C%20Canada&amp;startDate=2026-07-03&amp;endDate=2026-07-08&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Victoria search</span><em>Open</em></a>
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://www.airbnb.com/s/Port-Angeles--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Port Angeles</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.airbnb.com/s/Sequim--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Sequim</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vacasa.com/search?place=/usa/Washington/Port-Angeles/&amp;arrival=07%2F05%2F2026&amp;departure=07%2F10%2F2026&amp;bedrooms=3" target="_blank" rel="noopener"><span>Vacasa 3BR Port Angeles</span><em>Open</em></a>
   </div>
   <div class="day-panel">
-    <p class="eyebrow">Sample rhythm</p>
-    <ol><li>Ferry day; arrive and stock groceries.</li><li>Sooke Potholes + marina reset.</li><li>Whiffin Spit / East Sooke short walk.</li><li>Victoria Inner Harbour + Beacon Hill or gardens.</li><li>Ferry home with buffers.</li></ol>
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive, groceries, waterfront walk.</li><li>Hurricane Ridge viewpoints + short meadow trail.</li><li>Lake Crescent + Marymere Falls.</li><li>Dungeness Spit / Railroad Bridge Park.</li><li>Salt Creek tidepools or Elwha valley; home next morning.</li></ol>
   </div>
 </section>
 
-<section class="destination-detail" id="dest-vancouver">
+<section class="destination-detail" id="dest-rainier">
   <div class="detail-copy">
-    <p class="eyebrow">02 · Canada · Best culture with easy nature</p>
-    <h2>North Vancouver / Vancouver</h2>
-    <p class="lead">The easiest high-sightseeing option: city, harbor, rainforest, kid activities, groceries, and culture all close together.</p>
-    <p>This ranks high because it is the most flexible. If the group wants sightseeing and culture without losing access to nature, Vancouver is hard to beat: Stanley Park, Lynn Canyon, Granville Island, Shipyards, aquarium, and excellent food.</p>
-    <div class="anchor-links"><a href="https://www.destinationvancouver.com/" target="_blank" rel="noopener">Destination Vancouver</a>
-<a href="https://theshipyardsdistrict.ca/" target="_blank" rel="noopener">The Shipyards</a>
-<a href="https://vancouver.ca/parks-recreation-culture/stanley-park.aspx" target="_blank" rel="noopener">Stanley Park</a>
-<a href="https://www.vanaqua.org/" target="_blank" rel="noopener">Vancouver Aquarium</a>
-<a href="https://lynncanyon.ca/information/" target="_blank" rel="noopener">Lynn Canyon</a>
-<a href="https://maplewoodfarm.bc.ca/" target="_blank" rel="noopener">Maplewood Farm</a>
-<a href="https://granvilleisland.com/" target="_blank" rel="noopener">Granville Island</a></div>
+    <p class="eyebrow">02 · Washington · Ashford / Packwood base · Within 6h: Yes</p>
+    <h2>Mount Rainier cabin base</h2>
+    <p class="lead">Huge mountain payoff close to home: Paradise meadows, waterfalls, old-growth forest, scenic drives, and cabin downtime.</p>
+    <p><strong>Toddler / group fit:</strong> Good for car-based sightseeing plus carrier walks. Keep each day to one timed park entry / one gate area, then return to the cabin for naps.</p>
+    <p><strong>Tradeoff:</strong> July crowding and timed-entry rules can make mornings rigid; this is high-reward but less flexible than Olympic or Hood Canal.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Skyline segments at Paradise or Burroughs/Emmons viewpoints from Sunrise.</p>
+    <div class="anchor-links"><a href="https://www.nps.gov/mora/index.htm" target="_blank" rel="noopener">Mount Rainier NP</a>
+<a href="https://www.nps.gov/places/paradise.htm" target="_blank" rel="noopener">Paradise</a>
+<a href="https://www.nps.gov/mora/planyourvisit/sunrise.htm" target="_blank" rel="noopener">Sunrise</a>
+<a href="https://www.nps.gov/mora/planyourvisit/longmire.htm" target="_blank" rel="noopener">Longmire</a>
+<a href="https://visitrainier.com/" target="_blank" rel="noopener">Visit Rainier</a></div>
   </div>
   <div class="lodging-panel">
-    <p class="eyebrow">Lodging</p>
-    <h3>3BR+ options</h3>
-    <p>We can bring our own pack-and-play, so the lodging screen is bedroom count, location, budget, and enough floor space.</p>
-    <a class="lodging-link" href="https://www.airbnb.com/rooms/1127958109562348096?check_in=2026-07-05&amp;check_out=2026-07-10" target="_blank" rel="noopener"><span>Primary Airbnb</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.airbnb.com/s/North-Vancouver--British-Columbia--Canada/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3&amp;room_types%5B%5D=Entire%20home%2Fapt" target="_blank" rel="noopener"><span>Airbnb 3BR North Van search</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.vrbo.com/search?destination=North%20Vancouver%2C%20British%20Columbia%2C%20Canada&amp;startDate=2026-07-05&amp;endDate=2026-07-10&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR North Van search</span><em>Open</em></a>
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://www.airbnb.com/s/Ashford--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Ashford</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.airbnb.com/s/Packwood--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Packwood</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vrbo.com/search?destination=Ashford%2C%20Washington%2C%20United%20States&amp;startDate=2026-07-05&amp;endDate=2026-07-10&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Rainier base</span><em>Open</em></a>
   </div>
   <div class="day-panel">
-    <p class="eyebrow">Sample rhythm</p>
-    <ol><li>Arrive, Shipyards dinner/waterfront.</li><li>Stanley Park + Aquarium.</li><li>Lynn Canyon or Maplewood Farm.</li><li>Granville Island + city food day.</li><li>Slow morning, border-aware drive home.</li></ol>
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive, cabin check-in, groceries.</li><li>Paradise: Nisqually Vista / Myrtle Falls style day.</li><li>Longmire forest + Trail of the Shadows.</li><li>Waterfalls / Reflection Lakes scenic loop.</li><li>Sunrise day if access works; otherwise low-key cabin/river day.</li></ol>
   </div>
 </section>
 
 <section class="destination-detail" id="dest-squamish">
   <div class="detail-copy">
-    <p class="eyebrow">03 · Canada · Best mountain sightseeing</p>
+    <p class="eyebrow">03 · British Columbia · Sea-to-Sky base · Within 6h: Yes, with border buffer</p>
     <h2>Squamish + Whistler</h2>
-    <p class="lead">Best for dramatic scenery and nature; lower culture than Victoria or Vancouver, but very strong on sightseeing and hikes.</p>
-    <p>This is the biggest scenery payoff: fjord views, gondola, alpine village, lakes, waterfalls, and multiple toddler-scaled nature stops. It moves below Victoria/Vancouver only because culture is a lower priority fit.</p>
+    <p class="lead">Fjord views, gondola, waterfalls, lakes, alpine village day, and enough outdoor variety to fill every day easily.</p>
+    <p><strong>Toddler / group fit:</strong> Great with multiple cars and an Osprey: adults can split into easy gondola/lake days and harder trail variants without changing base.</p>
+    <p><strong>Tradeoff:</strong> Border and Sea-to-Sky traffic are the main friction; passports and border wait checks are mandatory.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Stawamus Chief segments or Garibaldi-area trail if the group wants a real workout.</p>
     <div class="anchor-links"><a href="https://www.exploresquamish.com/" target="_blank" rel="noopener">Explore Squamish</a>
 <a href="https://www.seatoskygondola.com/" target="_blank" rel="noopener">Sea to Sky Gondola</a>
 <a href="https://bcparks.ca/shannon-falls-park/" target="_blank" rel="noopener">Shannon Falls</a>
@@ -252,127 +228,198 @@
 <a href="https://www.drivebc.ca/" target="_blank" rel="noopener">DriveBC</a></div>
   </div>
   <div class="lodging-panel">
-    <p class="eyebrow">Lodging</p>
-    <h3>3BR+ options</h3>
-    <p>We can bring our own pack-and-play, so the lodging screen is bedroom count, location, budget, and enough floor space.</p>
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
     <a class="lodging-link" href="https://www.airbnb.com/rooms/1635753686728824498?check_in=2026-07-05&amp;check_out=2026-07-10" target="_blank" rel="noopener"><span>Primary Airbnb</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.airbnb.com/s/Squamish--British-Columbia--Canada/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3&amp;room_types%5B%5D=Entire%20home%2Fapt" target="_blank" rel="noopener"><span>Airbnb 3BR Squamish search</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.outpostwhistler.com/whistler-vacation-rentals?checkin=07%2F05%2F2026&amp;checkout=07%2F10%2F2026&amp;sleeps=Any&amp;bedrooms=3&amp;bathrooms=Any&amp;mapsearch=1" target="_blank" rel="noopener"><span>Outpost Whistler 3BR search</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.airbnb.com/s/Squamish--British-Columbia--Canada/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3&amp;room_types%5B%5D=Entire%20home%2Fapt" target="_blank" rel="noopener"><span>Airbnb 3BR Squamish</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.outpostwhistler.com/whistler-vacation-rentals?checkin=07%2F05%2F2026&amp;checkout=07%2F10%2F2026&amp;sleeps=Any&amp;bedrooms=3&amp;bathrooms=Any&amp;mapsearch=1" target="_blank" rel="noopener"><span>Outpost Whistler 3BR</span><em>Open</em></a>
   </div>
   <div class="day-panel">
-    <p class="eyebrow">Sample rhythm</p>
-    <ol><li>Arrive, groceries, easy Howe Sound sunset.</li><li>Sea to Sky Gondola + Shannon Falls.</li><li>Alice Lake / easy lakeside nature day.</li><li>Whistler Village + Lost Lake.</li><li>Slow breakfast, optional waterfall stop, home.</li></ol>
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive + border buffer; groceries.</li><li>Sea to Sky Gondola + suspension bridge viewpoints.</li><li>Shannon Falls + easy river/waterfront reset.</li><li>Alice Lake / Brohm Lake nature day.</li><li>Whistler Village + Lost Lake, then home next day.</li></ol>
   </div>
 </section>
 
-<section class="destination-detail" id="dest-oregon">
+<section class="destination-detail" id="dest-hood-canal">
   <div class="detail-copy">
-    <p class="eyebrow">04 · United States · Best U.S. vacation feel</p>
+    <p class="eyebrow">04 · Washington · Hoodsport / Lake Cushman base · Within 6h: Yes</p>
+    <h2>Hood Canal + Lake Cushman</h2>
+    <p class="lead">The most on-brief cabin option: canal, lake, Olympic foothills, easy state parks, oysters, and low drive friction.</p>
+    <p><strong>Toddler / group fit:</strong> Very easy for a multi-car family group: short drives, cabin downtime, beach/lake resets, and flexible split plans for grandparents vs. stronger hikers.</p>
+    <p><strong>Tradeoff:</strong> Lower culture and less “big destination” drama than Olympic, Rainier, or Squamish.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Mount Ellinor or a Staircase-area longer route if conditions fit.</p>
+    <div class="anchor-links"><a href="https://www.explorehoodcanal.com/" target="_blank" rel="noopener">Explore Hood Canal</a>
+<a href="https://www.nps.gov/olym/planyourvisit/visiting-staircase.htm" target="_blank" rel="noopener">Olympic Staircase</a>
+<a href="https://parks.wa.gov/find-parks/state-parks/twanoh-state-park" target="_blank" rel="noopener">Twanoh State Park</a>
+<a href="https://parks.wa.gov/find-parks/state-parks/potlatch-state-park" target="_blank" rel="noopener">Potlatch State Park</a>
+<a href="https://hamahamaoysters.com/pages/visit" target="_blank" rel="noopener">Hama Hama</a></div>
+  </div>
+  <div class="lodging-panel">
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://www.airbnb.com/s/Hoodsport--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Hoodsport</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.airbnb.com/s/Lake-Cushman--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Lake Cushman</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vrbo.com/search?destination=Hoodsport%2C%20Washington%2C%20United%20States&amp;startDate=2026-07-05&amp;endDate=2026-07-10&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Hood Canal</span><em>Open</em></a>
+  </div>
+  <div class="day-panel">
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive, cabin setup, Hood Canal beach walk.</li><li>Lake Cushman swim/paddle/picnic day.</li><li>Staircase forest walk in Olympic NP.</li><li>Twanoh or Potlatch State Park beach day.</li><li>Hama Hama / canal drive; optional short hike.</li></ol>
+  </div>
+</section>
+
+<section class="destination-detail" id="dest-baker">
+  <div class="detail-copy">
+    <p class="eyebrow">05 · Washington · Glacier / Mt. Baker Highway base · Within 6h: Yes</p>
+    <h2>Mount Baker / Glacier</h2>
+    <p class="lead">True river-and-mountain cabin energy with Picture Lake, Heather Meadows, waterfalls, forest roads, and North Cascades atmosphere.</p>
+    <p><strong>Toddler / group fit:</strong> Good for cabin downtime and Osprey hikes; harder for stroller logistics and groceries, so choose lodging carefully.</p>
+    <p><strong>Tradeoff:</strong> July snow can affect high trails around Artist Point / Heather Meadows; culture and grocery depth are limited.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Chain Lakes / Artist Ridge area if snow and group energy cooperate.</p>
+    <div class="anchor-links"><a href="https://www.nps.gov/noca/index.htm" target="_blank" rel="noopener">North Cascades NP</a>
+<a href="https://www.fs.usda.gov/r06/mbs/recreation/mt-baker-highway-sr-542" target="_blank" rel="noopener">Mount Baker Highway</a>
+<a href="https://mtbakerlodging.com/" target="_blank" rel="noopener">Mt Baker Lodging</a>
+<a href="https://www.wta.org/go-hiking/hikes/nooksack-falls" target="_blank" rel="noopener">Nooksack Falls</a></div>
+  </div>
+  <div class="lodging-panel">
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://www.airbnb.com/s/Glacier--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Glacier</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vrbo.com/search?destination=Glacier%2C%20Washington%2C%20United%20States&amp;startDate=2026-07-05&amp;endDate=2026-07-10&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Glacier</span><em>Open</em></a>
+<a class="lodging-link" href="https://mtbakerlodging.com/vacation-rentals/?bedrooms=3" target="_blank" rel="noopener"><span>Mt Baker Lodging 3BR</span><em>Open</em></a>
+  </div>
+  <div class="day-panel">
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive to Glacier, groceries before final stretch.</li><li>Picture Lake / Heather Meadows sightseeing.</li><li>Nooksack Falls + river/cabin downtime.</li><li>Easy forest trail or Artist Point if open.</li><li>Optional North Cascades scenic drive segment; home.</li></ol>
+  </div>
+</section>
+
+<section class="destination-detail" id="dest-hood-river">
+  <div class="detail-copy">
+    <p class="eyebrow">06 · Oregon · Hood River base · Within 6h: Yes</p>
+    <h2>Hood River + Columbia Gorge</h2>
+    <p class="lead">River, waterfalls, cliffs, orchards, waterfront parks, and enough outdoor stops to keep every day distinct.</p>
+    <p><strong>Toddler / group fit:</strong> Works well by car with stroller-friendly viewpoints and picnic stops; heat/wind make morning outings better.</p>
+    <p><strong>Tradeoff:</strong> Longer drive and hotter July conditions; less quiet-cabin than Hood Canal or Baker.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Dog Mountain-style effort is possible but exposed/hot; choose carefully with carrier.</p>
+    <div class="anchor-links"><a href="https://visithoodriver.com/" target="_blank" rel="noopener">Visit Hood River</a>
+<a href="https://www.fs.usda.gov/crgnsa" target="_blank" rel="noopener">Columbia Gorge</a>
+<a href="https://www.fs.usda.gov/r06/columbiarivergorge/recreation/multnomah-falls" target="_blank" rel="noopener">Multnomah Falls</a>
+<a href="https://www.hoodriverfruitloop.com/" target="_blank" rel="noopener">Fruit Loop</a>
+<a href="https://stateparks.oregon.gov/index.cfm?do=park.profile&amp;parkId=113" target="_blank" rel="noopener">Mosier Twin Tunnels</a></div>
+  </div>
+  <div class="lodging-panel">
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://www.airbnb.com/s/Hood-River--Oregon--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Hood River</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vacasa.com/search?place=/usa/Oregon/Hood-River/&amp;arrival=07%2F05%2F2026&amp;departure=07%2F10%2F2026&amp;bedrooms=3" target="_blank" rel="noopener"><span>Vacasa 3BR Hood River</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vrbo.com/search?destination=Hood%20River%2C%20Oregon%2C%20United%20States&amp;startDate=2026-07-05&amp;endDate=2026-07-10&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Hood River</span><em>Open</em></a>
+  </div>
+  <div class="day-panel">
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive, riverfront dinner/picnic.</li><li>Waterfall corridor morning; nap reset.</li><li>Fruit Loop orchards / farm stands.</li><li>Mosier Twin Tunnels or Rowena Crest views.</li><li>Hood River waterfront park; home next day.</li></ol>
+  </div>
+</section>
+
+<section class="destination-detail" id="dest-oregon-coast">
+  <div class="detail-copy">
+    <p class="eyebrow">07 · Oregon · Manzanita / Cannon Beach base · Within 6h: Yes, but holiday traffic can be tight</p>
     <h2>North Oregon Coast</h2>
-    <p class="lead">Best U.S. alternative if the group wants beaches and headlands over city culture.</p>
-    <p>The coast gives real trip novelty without crossing a border: Haystack Rock, Ecola views, Oswald West, Manzanita beach mornings, and Tillamook as an easy kid-friendly stop. Culture is lighter than Victoria/Vancouver.</p>
-    <div class="anchor-links"><a href="https://visittheoregoncoast.com/regions/north-coast/" target="_blank" rel="noopener">Visit North Coast</a>
-<a href="https://visittheoregoncoast.com/cities/manzanita/" target="_blank" rel="noopener">Manzanita</a>
-<a href="https://www.cannonbeach.org/" target="_blank" rel="noopener">Cannon Beach</a>
+    <p class="lead">Beach vacation energy with tidepools, headlands, forests, sand, and easy outdoor days once you are there.</p>
+    <p><strong>Toddler / group fit:</strong> Strong for low-key beach mornings and stroller town walks; use carrier for headland trails and keep tide timing flexible.</p>
+    <p><strong>Tradeoff:</strong> It is the longest U.S. drive on the list and can push past six hours with July traffic.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Neahkahnie Mountain if the group wants elevation and views.</p>
+    <div class="anchor-links"><a href="https://www.cannonbeach.org/" target="_blank" rel="noopener">Cannon Beach</a>
 <a href="https://www.cannonbeach.org/things-to-do/beaches-and-parks/haystack-rock/" target="_blank" rel="noopener">Haystack Rock</a>
 <a href="https://stateparks.oregon.gov/index.cfm?do=park.profile&amp;parkId=136" target="_blank" rel="noopener">Ecola State Park</a>
 <a href="https://stateparks.oregon.gov/index.cfm?do=park.profile&amp;parkId=139" target="_blank" rel="noopener">Oswald West</a>
 <a href="https://www.tillamook.com/visit-us/creamery" target="_blank" rel="noopener">Tillamook Creamery</a></div>
   </div>
   <div class="lodging-panel">
-    <p class="eyebrow">Lodging</p>
-    <h3>3BR+ options</h3>
-    <p>We can bring our own pack-and-play, so the lodging screen is bedroom count, location, budget, and enough floor space.</p>
-    <a class="lodging-link" href="https://www.airbnb.com/s/Manzanita--Oregon--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Manzanita search</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.vacasa.com/search?place=/usa/Oregon/Manzanita/&amp;arrival=07%2F05%2F2026&amp;departure=07%2F10%2F2026&amp;bedrooms=3" target="_blank" rel="noopener"><span>Vacasa 3BR Manzanita search</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.haystackluxuryvacationrentals.com/3-bedroom/" target="_blank" rel="noopener"><span>Haystack Luxury 3BR rentals</span><em>Open</em></a>
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://www.airbnb.com/s/Manzanita--Oregon--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Manzanita</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vacasa.com/search?place=/usa/Oregon/Manzanita/&amp;arrival=07%2F05%2F2026&amp;departure=07%2F10%2F2026&amp;bedrooms=3" target="_blank" rel="noopener"><span>Vacasa 3BR Manzanita</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.haystackluxuryvacationrentals.com/3-bedroom/" target="_blank" rel="noopener"><span>Haystack Luxury 3BR</span><em>Open</em></a>
   </div>
   <div class="day-panel">
-    <p class="eyebrow">Sample rhythm</p>
-    <ol><li>Arrive, stock groceries, beach walk.</li><li>Haystack Rock + Cannon Beach town.</li><li>Ecola or Oswald West short-viewpoint day.</li><li>Tillamook Creamery + Nehalem/Manzanita beach reset.</li><li>Slow coast morning, drive home.</li></ol>
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive, groceries, beach walk.</li><li>Haystack Rock low-tide / Cannon Beach.</li><li>Ecola viewpoint + short forest walk.</li><li>Oswald West / Manzanita beach day.</li><li>Tillamook Creamery stop or slow coast morning; home.</li></ol>
   </div>
 </section>
 
-<section class="destination-detail" id="dest-olympic">
+<section class="destination-detail" id="dest-vancouver">
   <div class="detail-copy">
-    <p class="eyebrow">05 · United States · Best U.S. nature base</p>
-    <h2>Olympic Peninsula</h2>
-    <p class="lead">Excellent for hikes and nature, but ranked lower because culture is the weakest of the five.</p>
-    <p>Olympic gives national-park scale close to home: alpine meadows, a glacial lake, waterfalls, wildlife refuge, and optional ferry routing. It is the strongest pure-nature U.S. option, but less culturally rich than the top picks.</p>
-    <div class="anchor-links"><a href="https://www.nps.gov/olym/index.htm" target="_blank" rel="noopener">Olympic National Park</a>
-<a href="https://www.nps.gov/olym/planyourvisit/visiting-hurricane-ridge.htm" target="_blank" rel="noopener">Hurricane Ridge</a>
-<a href="https://www.nps.gov/olym/planyourvisit/visiting-lake-crescent.htm" target="_blank" rel="noopener">Lake Crescent</a>
-<a href="https://www.nps.gov/places/000/marymere-falls-trailhead.htm" target="_blank" rel="noopener">Marymere Falls</a>
-<a href="https://www.fws.gov/refuge/dungeness" target="_blank" rel="noopener">Dungeness Refuge</a>
-<a href="https://olympicdiscoverytrail.org/" target="_blank" rel="noopener">Olympic Discovery Trail</a>
-<a href="https://www.visitportangeles.com/" target="_blank" rel="noopener">Visit Port Angeles</a></div>
+    <p class="eyebrow">08 · British Columbia · North Shore base · Within 6h: Yes</p>
+    <h2>North Vancouver / Vancouver</h2>
+    <p class="lead">Plenty of outdoor activities—Stanley Park, Lynn Canyon, waterfronts, aquarium, mountain viewpoints—but it is still a city trip.</p>
+    <p><strong>Toddler / group fit:</strong> Best if lodging has parking and you stay North Shore. Multiple cars help, but city parking/traffic makes it less effortless.</p>
+    <p><strong>Tradeoff:</strong> Demoted because the request now prioritizes nature over urban/indoor activities.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: Quarry Rock / North Shore trail if access and parking work.</p>
+    <div class="anchor-links"><a href="https://www.destinationvancouver.com/" target="_blank" rel="noopener">Destination Vancouver</a>
+<a href="https://vancouver.ca/parks-recreation-culture/stanley-park.aspx" target="_blank" rel="noopener">Stanley Park</a>
+<a href="https://lynncanyon.ca/information/" target="_blank" rel="noopener">Lynn Canyon</a>
+<a href="https://www.vanaqua.org/" target="_blank" rel="noopener">Vancouver Aquarium</a>
+<a href="https://theshipyardsdistrict.ca/" target="_blank" rel="noopener">The Shipyards</a>
+<a href="https://www.grousemountain.com/" target="_blank" rel="noopener">Grouse Mountain</a></div>
   </div>
   <div class="lodging-panel">
-    <p class="eyebrow">Lodging</p>
-    <h3>3BR+ options</h3>
-    <p>We can bring our own pack-and-play, so the lodging screen is bedroom count, location, budget, and enough floor space.</p>
-    <a class="lodging-link" href="https://www.airbnb.com/s/Port-Angeles--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Port Angeles search</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.airbnb.com/s/Sequim--Washington--United-States/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Sequim search</span><em>Open</em></a>
-<a class="lodging-link" href="https://www.vacasa.com/search?place=/usa/Washington/Port-Angeles/&amp;arrival=07%2F05%2F2026&amp;departure=07%2F10%2F2026&amp;bedrooms=3" target="_blank" rel="noopener"><span>Vacasa 3BR Port Angeles search</span><em>Open</em></a>
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://www.airbnb.com/rooms/1127958109562348096?check_in=2026-07-05&amp;check_out=2026-07-10" target="_blank" rel="noopener"><span>Primary Airbnb</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.airbnb.com/s/North-Vancouver--British-Columbia--Canada/homes?checkin=2026-07-05&amp;checkout=2026-07-10&amp;min_bedrooms=3&amp;room_types%5B%5D=Entire%20home%2Fapt" target="_blank" rel="noopener"><span>Airbnb 3BR North Van</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vrbo.com/search?destination=North%20Vancouver%2C%20British%20Columbia%2C%20Canada&amp;startDate=2026-07-05&amp;endDate=2026-07-10&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR North Van</span><em>Open</em></a>
   </div>
   <div class="day-panel">
-    <p class="eyebrow">Sample rhythm</p>
-    <ol><li>Arrive via car-only or ferry route; groceries in town.</li><li>Hurricane Ridge morning, nap/reset, easy dinner.</li><li>Lake Crescent + Marymere Falls.</li><li>Dungeness Refuge or Olympic Discovery Trail.</li><li>Slow breakfast, optional waterfront stop, home.</li></ol>
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Drive + border; Shipyards waterfront.</li><li>Stanley Park seawall / beaches.</li><li>Lynn Canyon morning, nap reset.</li><li>Grouse or Capilano-style mountain viewpoint.</li><li>Aquarium only if weather turns; otherwise waterfront park day.</li></ol>
+  </div>
+</section>
+
+<section class="destination-detail" id="dest-sooke">
+  <div class="detail-copy">
+    <p class="eyebrow">09 · British Columbia · Sooke / Victoria base · Within 6h: Borderline; keep only with ferry reservations</p>
+    <h2>Sooke + Victoria</h2>
+    <p class="lead">Excellent coastal nature and daily options—potholes, beaches, gardens, harbor, tidepools—but ferry timing makes it the least easy.</p>
+    <p><strong>Toddler / group fit:</strong> Works if the group accepts a travel day with reservations and buffers; once based in Sooke, daily outdoor outings are straightforward by car.</p>
+    <p><strong>Tradeoff:</strong> Lowest logistics score: ferry + border + holiday traffic can push this over the six-hour spirit.</p>
+    <p><strong>Optional harder outing:</strong> Optional stronger adult hike: East Sooke coastal trail segments.</p>
+    <div class="anchor-links"><a href="https://www.tourismvictoria.com/" target="_blank" rel="noopener">Tourism Victoria</a>
+<a href="https://www.bcferries.com/" target="_blank" rel="noopener">BC Ferries</a>
+<a href="https://www.crd.bc.ca/parks-recreation-culture/parks-trails/find-park-trail/sooke-potholes" target="_blank" rel="noopener">Sooke Potholes</a>
+<a href="https://www.visitsooke.ca/main-directory/whiffin-spit-park" target="_blank" rel="noopener">Whiffin Spit</a>
+<a href="https://www.crd.bc.ca/parks-recreation-culture/parks-trails/find-park-trail/east-sooke" target="_blank" rel="noopener">East Sooke Park</a>
+<a href="https://www.butchartgardens.com/" target="_blank" rel="noopener">Butchart Gardens</a></div>
+  </div>
+  <div class="lodging-panel">
+    <p class="eyebrow">Lodging proof</p>
+    <h3>3BR+ paths</h3>
+    <p>Bring our own pack-and-play; lodging screen is bedrooms, layout/floor space, parking, groceries, and drive-to-activity friction.</p>
+    <a class="lodging-link" href="https://truekeyvacations.com/rental/5009/" target="_blank" rel="noopener"><span>Primary True Key rental</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.airbnb.com/s/Sooke--British-Columbia--Canada/homes?checkin=2026-07-03&amp;checkout=2026-07-08&amp;min_bedrooms=3&amp;room_types%5B%5D=Entire%20home%2Fapt" target="_blank" rel="noopener"><span>Airbnb 3BR Sooke</span><em>Open</em></a>
+<a class="lodging-link" href="https://www.vrbo.com/search?destination=Victoria%2C%20British%20Columbia%2C%20Canada&amp;startDate=2026-07-03&amp;endDate=2026-07-08&amp;bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Victoria</span><em>Open</em></a>
+  </div>
+  <div class="day-panel">
+    <p class="eyebrow">High-level daily rhythm</p>
+    <ol><li>Ferry/border travel day; groceries.</li><li>Sooke Potholes + river picnic.</li><li>Whiffin Spit / East Sooke short hike.</li><li>French Beach or tidepool day.</li><li>Victoria Inner Harbour / Butchart if energy allows; ferry home.</li></ol>
   </div>
 </section></div>
-    <section class="compare" id="compare"><div class="compare-inner"><p class="eyebrow">Fast family comparison</p><h2>Side-by-side planning view.</h2><div class="table-wrap"><table><thead><tr><th>Destination</th><th>Country</th><th>Sightseeing</th><th>Hikes + nature</th><th>Culture</th><th>Best fit</th></tr></thead><tbody><tr><td>Sooke + Victoria</td><td>Canada</td><td>Sightseeing ★★★★★</td><td>Nature ★★★★☆</td><td>Culture ★★★★★</td><td>Best overall under the new priorities: strongest sightseeing, strong nature days, and the best culture layer through Victoria.</td></tr>
-<tr><td>North Vancouver / Vancouver</td><td>Canada</td><td>Sightseeing ★★★★★</td><td>Nature ★★★★☆</td><td>Culture ★★★★★</td><td>The easiest high-sightseeing option: city, harbor, rainforest, kid activities, groceries, and culture all close together.</td></tr>
-<tr><td>Squamish + Whistler</td><td>Canada</td><td>Sightseeing ★★★★★</td><td>Nature ★★★★★</td><td>Culture ★★★☆☆</td><td>Best for dramatic scenery and nature; lower culture than Victoria or Vancouver, but very strong on sightseeing and hikes.</td></tr>
-<tr><td>North Oregon Coast</td><td>United States</td><td>Sightseeing ★★★★☆</td><td>Nature ★★★★★</td><td>Culture ★★★☆☆</td><td>Best U.S. alternative if the group wants beaches and headlands over city culture.</td></tr>
-<tr><td>Olympic Peninsula</td><td>United States</td><td>Sightseeing ★★★★☆</td><td>Nature ★★★★★</td><td>Culture ★★☆☆☆</td><td>Excellent for hikes and nature, but ranked lower because culture is the weakest of the five.</td></tr></tbody></table></div></div></section>
-
-    <section class="cabin-section" id="cabins">
-      <div class="cabin-inner">
-        <p class="eyebrow">Park + cabin addendum</p>
-        <h2>Cabin-style ideas worth checking next.</h2>
-        <p class="lead">These are not promoted into the main top five yet; they are the best “national park / state park / waterfront-lake-river-mountain cabin” directions to pressure-test against the current shortlist.</p>
-        <div class="cabin-grid">
-          <article class="cabin-card">
-            <p class="eyebrow">Closest match to Hood Canal cabin brief</p>
-            <h3>Hood Canal + Lake Cushman</h3>
-            <p><strong>Why look:</strong> waterfront or lake cabin feel, Olympic foothills, Staircase, Twanoh/Potlatch state parks, oysters, and a much easier drive than Canada or Oregon.</p>
-            <p><strong>Tradeoff:</strong> culture is lighter; this is mainly lake/canal/mountain downtime.</p>
-            <div class="scores"><span>Sightseeing ★★★★☆</span><span>Nature ★★★★★</span><span>Culture ★★☆☆☆</span></div>
-            <div class="links"><a href="https://www.explorehoodcanal.com/" target="_blank" rel="noopener">Explore Hood Canal</a><a href="https://www.nps.gov/olym/planyourvisit/visiting-staircase.htm" target="_blank" rel="noopener">Olympic Staircase</a><a href="https://parks.wa.gov/find-parks/state-parks/twanoh-state-park" target="_blank" rel="noopener">Twanoh State Park</a><a href="https://parks.wa.gov/find-parks/state-parks/potlatch-state-park" target="_blank" rel="noopener">Potlatch State Park</a><a href="https://hamahamaoysters.com/pages/visit" target="_blank" rel="noopener">Hama Hama</a></div>
-            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Hoodsport--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Hoodsport</span><em>Open</em></a><a href="https://www.airbnb.com/s/Lake-Cushman--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Lake Cushman</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Hoodsport%2C%20Washington%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Hood Canal</span><em>Open</em></a></div>
-          </article>
-          <article class="cabin-card">
-            <p class="eyebrow">Best national-park sightseeing</p>
-            <h3>Mount Rainier cabin base</h3>
-            <p><strong>Why look:</strong> iconic Paradise/Sunrise sightseeing, wildflower season potential, waterfall/forest walks, and Ashford or Packwood cabin inventory.</p>
-            <p><strong>Tradeoff:</strong> July crowding and timed-entry/park access rules can make toddler logistics rigid.</p>
-            <div class="scores"><span>Sightseeing ★★★★★</span><span>Nature ★★★★★</span><span>Culture ★★☆☆☆</span></div>
-            <div class="links"><a href="https://www.nps.gov/mora/index.htm" target="_blank" rel="noopener">Mount Rainier NP</a><a href="https://www.nps.gov/places/paradise.htm" target="_blank" rel="noopener">Paradise</a><a href="https://www.nps.gov/mora/planyourvisit/sunrise.htm" target="_blank" rel="noopener">Sunrise</a><a href="https://visitrainier.com/" target="_blank" rel="noopener">Visit Rainier</a></div>
-            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Ashford--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Ashford</span><em>Open</em></a><a href="https://www.airbnb.com/s/Packwood--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Packwood</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Ashford%2C%20Washington%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Rainier base</span><em>Open</em></a></div>
-          </article>
-          <article class="cabin-card">
-            <p class="eyebrow">Best river + culture add</p>
-            <h3>Hood River + Columbia Gorge</h3>
-            <p><strong>Why look:</strong> river views, waterfalls, basalt cliffs, orchards, Hood River food/shops, and a stronger culture layer than most cabin bases.</p>
-            <p><strong>Tradeoff:</strong> less “quiet lake cabin,” more active river town; July heat/wind can shape the day.</p>
-            <div class="scores"><span>Sightseeing ★★★★★</span><span>Nature ★★★★☆</span><span>Culture ★★★★☆</span></div>
-            <div class="links"><a href="https://visithoodriver.com/" target="_blank" rel="noopener">Visit Hood River</a><a href="https://www.fs.usda.gov/crgnsa" target="_blank" rel="noopener">Columbia Gorge</a><a href="https://www.fs.usda.gov/r06/columbiarivergorge/recreation/multnomah-falls" target="_blank" rel="noopener">Multnomah Falls</a><a href="https://www.hoodriverfruitloop.com/" target="_blank" rel="noopener">Fruit Loop</a></div>
-            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Hood-River--Oregon--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Hood River</span><em>Open</em></a><a href="https://www.vacasa.com/search?place=/usa/Oregon/Hood-River/&arrival=07%2F05%2F2026&departure=07%2F10%2F2026&bedrooms=3" target="_blank" rel="noopener"><span>Vacasa 3BR Hood River</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Hood%20River%2C%20Oregon%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Hood River</span><em>Open</em></a></div>
-          </article>
-          <article class="cabin-card">
-            <p class="eyebrow">Best mountain-cabin feel</p>
-            <h3>Mount Baker / Glacier</h3>
-            <p><strong>Why look:</strong> true river/mountain cabin inventory, Picture Lake/Heather Meadows scenery, forest hikes, and North Cascades access without border/ferry logistics.</p>
-            <p><strong>Tradeoff:</strong> culture and grocery depth are limited; this is a nature-first cabin trip.</p>
-            <div class="scores"><span>Sightseeing ★★★★☆</span><span>Nature ★★★★★</span><span>Culture ★★☆☆☆</span></div>
-            <div class="links"><a href="https://www.nps.gov/noca/index.htm" target="_blank" rel="noopener">North Cascades NP</a><a href="https://www.fs.usda.gov/r06/mbs/recreation/mt-baker-highway-sr-542" target="_blank" rel="noopener">Mount Baker Byway</a><a href="https://mtbakerlodging.com/" target="_blank" rel="noopener">Mt Baker Lodging</a></div>
-            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Glacier--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Glacier</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Glacier%2C%20Washington%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Glacier</span><em>Open</em></a><a href="https://mtbakerlodging.com/vacation-rentals/?bedrooms=3" target="_blank" rel="noopener"><span>Mt Baker Lodging 3BR</span><em>Open</em></a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="pillars"><div class="pillar-copy"><p class="eyebrow">Current shortlist</p><h2>Five family trip options.</h2><ul><li>Ranked by sightseeing first, hikes/nature second, culture third.</li><li>Includes two U.S. options so the shortlist is not Canada-only.</li><li>Lodging is screened around 3+ bedrooms, not provided crib gear.</li><li>Each destination keeps multiple lodging paths so one booked-out house does not collapse the plan.</li></ul></div><div class="pillar-art" role="img" aria-label="Olympic mountain meadow"></div></section>
+    <section class="compare" id="compare"><div class="compare-inner"><p class="eyebrow">Side-by-side</p><h2>Six-hour gate + outdoor ranking.</h2><div class="table-wrap"><table><thead><tr><th>Rank / destination</th><th>Drive gate</th><th>Nature</th><th>Daily activities</th><th>Logistics</th><th>Main caveat</th></tr></thead><tbody><tr><td>01 · Olympic Peninsula</td><td>~3–4.5h from Kirkland; ferry optional but not required</td><td>Nature ★★★★★</td><td>Daily activities ★★★★★</td><td>Logistics ★★★★☆</td><td>Ferry can be scenic but adds timing risk; driving around keeps logistics easiest for two or three cars.</td></tr>
+<tr><td>02 · Mount Rainier cabin base</td><td>~2.5–3.5h from Kirkland depending base</td><td>Nature ★★★★★</td><td>Daily activities ★★★★☆</td><td>Logistics ★★★☆☆</td><td>July crowding and timed-entry rules can make mornings rigid; this is high-reward but less flexible than Olympic or Hood Canal.</td></tr>
+<tr><td>03 · Squamish + Whistler</td><td>~4–5.5h from Kirkland with border buffer</td><td>Nature ★★★★★</td><td>Daily activities ★★★★★</td><td>Logistics ★★★☆☆</td><td>Border and Sea-to-Sky traffic are the main friction; passports and border wait checks are mandatory.</td></tr>
+<tr><td>04 · Hood Canal + Lake Cushman</td><td>~2–3h from Kirkland</td><td>Nature ★★★★☆</td><td>Daily activities ★★★★☆</td><td>Logistics ★★★★★</td><td>Lower culture and less “big destination” drama than Olympic, Rainier, or Squamish.</td></tr>
+<tr><td>05 · Mount Baker / Glacier</td><td>~2.5–3.5h from Kirkland</td><td>Nature ★★★★★</td><td>Daily activities ★★★★☆</td><td>Logistics ★★★☆☆</td><td>July snow can affect high trails around Artist Point / Heather Meadows; culture and grocery depth are limited.</td></tr>
+<tr><td>06 · Hood River + Columbia Gorge</td><td>~4.5–5.5h from Kirkland</td><td>Nature ★★★★☆</td><td>Daily activities ★★★★★</td><td>Logistics ★★★☆☆</td><td>Longer drive and hotter July conditions; less quiet-cabin than Hood Canal or Baker.</td></tr>
+<tr><td>07 · North Oregon Coast</td><td>~5–6h from Kirkland</td><td>Nature ★★★★☆</td><td>Daily activities ★★★★☆</td><td>Logistics ★★★☆☆</td><td>It is the longest U.S. drive on the list and can push past six hours with July traffic.</td></tr>
+<tr><td>08 · North Vancouver / Vancouver</td><td>~3–4.5h from Kirkland with border buffer</td><td>Nature ★★★★☆</td><td>Daily activities ★★★★★</td><td>Logistics ★★★☆☆</td><td>Demoted because the request now prioritizes nature over urban/indoor activities.</td></tr>
+<tr><td>09 · Sooke + Victoria</td><td>~5.5–6h from Kirkland with ferry/border buffers</td><td>Nature ★★★★☆</td><td>Daily activities ★★★★★</td><td>Logistics ★★☆☆☆</td><td>Lowest logistics score: ferry + border + holiday traffic can push this over the six-hour spirit.</td></tr></tbody></table></div></div></section>
+    <section class="pillars"><div class="pillar-copy"><p class="eyebrow">Current recommendation</p><h2>Start by deciding cabin-vibe vs. national-park payoff.</h2><ul><li>If the family wants maximum outdoor variety: choose Olympic Peninsula.</li><li>If the family wants iconic mountain scenery: choose Mount Rainier or Squamish.</li><li>If the family wants easy waterfront cabin logistics: choose Hood Canal + Lake Cushman.</li><li>If strict logistics beat everything else, keep ferry/border options lower.</li></ul></div><div class="pillar-art" role="img" aria-label="Olympic national park landscape"></div></section>
   </main>
-  <footer><p><strong>Share-safe public trip board.</strong></p><p>No booking, host contact, calendar hold, reminder, purchase, or external message has been made from this page. Lodging prices and availability are dynamic and should be rechecked before deciding.</p></footer>
+  <footer><p><strong>Share-safe public trip board.</strong></p><p>No booking, host contact, calendar hold, reminder, purchase, or external message has been made from this page. Drive times are planning estimates and should be rechecked against live traffic, ferry/border waits, and park-entry rules before deciding.</p></footer>
 </body>
 </html>
