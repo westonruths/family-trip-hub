@@ -9,8 +9,7 @@ https://westonruths.github.io/family-trip-hub/
 
 - Built for family decision-making.
 - Current shortlist keeps options within roughly six hours of Kirkland under normal routing.
-- Olympic National Park and Mount Rainier National Park are excluded because the family has already done multi-day trips there.
-- Banff is treated as a separate fly-to-Calgary or two-day-drive exception, not part of the six-hour road-trip shortlist.
+
 - No private home address or sensitive details included.
 - No booking, host contact, calendar event, reminder, or purchase was made.
 
