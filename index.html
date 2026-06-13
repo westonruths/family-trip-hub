@@ -79,13 +79,25 @@
     .pillar-copy { background:var(--cream); border:1px solid var(--line); padding:clamp(2rem,5vw,4rem); }
     .pillar-copy ul { margin:1.2rem 0 0; padding-left:1.2rem; }
     .pillar-art { min-height:420px; background:linear-gradient(rgba(45,43,44,.08), rgba(45,43,44,.02)), url('https://www.nps.gov/olym/planyourvisit/images/hr-meadow.jpg') center/cover; }
+
+    .cabin-section { padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,3rem); background:var(--cream); }
+    .cabin-inner { max-width:1220px; margin:auto; }
+    .cabin-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1.5rem; }
+    .cabin-card { background:var(--soft); border:1px solid var(--line); padding:clamp(1.2rem,3vw,2rem); }
+    .cabin-card h3 { margin-bottom:.6rem; }
+    .cabin-card p { color:var(--muted); margin:.55rem 0; }
+    .cabin-card .links { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0; }
+    .cabin-card .links a { text-decoration:none; font-family:Inter,system-ui,sans-serif; font-size:.78rem; font-weight:700; background:#fff; border:1px solid var(--line); padding:.55rem .7rem; }
+    .cabin-lodging { display:grid; gap:.35rem; margin-top:1rem; }
+    .cabin-lodging a { display:flex; justify-content:space-between; gap:1rem; text-decoration:none; border-top:1px solid var(--line); padding:.6rem 0; font-family:Inter,system-ui,sans-serif; font-size:.82rem; font-weight:700; }
+    .cabin-lodging em { color:var(--rose); font-style:normal; text-transform:uppercase; letter-spacing:.12em; font-size:.68rem; }
     footer { background:var(--charcoal); color:#fff; text-align:center; padding:3rem 1rem; }
     footer p { margin:.25rem auto; max-width:800px; color:#eadad5; }
     @media (max-width:900px) { .nav { align-items:flex-start; } .cards,.verdict .grid,.day-panel ol,.pillars { grid-template-columns:1fr; } .destination-detail { grid-template-columns:1fr; } .hero { min-height:62vh; } }
   </style>
 </head>
 <body>
-  <header class="nav"><strong>Family Trip Options</strong><div><a href="#verdict">Verdict</a><a href="#destinations">Destinations</a><a href="#details">Lodging</a><a href="#compare">Compare</a></div></header>
+  <header class="nav"><strong>Family Trip Options</strong><div><a href="#verdict">Verdict</a><a href="#destinations">Destinations</a><a href="#details">Lodging</a><a href="#cabins">Cabins</a><a href="#compare">Compare</a></div></header>
   <section class="hero">
     <div class="hero-inner">
       <p class="eyebrow">July family trip</p>
@@ -94,7 +106,7 @@
       <div class="cta-row"><a class="cta primary" href="#destinations">See options</a><a class="cta secondary" href="#compare">Compare</a></div>
     </div>
   </section>
-  <nav class="strip"><a href="#verdict">Quick verdict</a><a href="#destinations">Destinations</a><a href="#details">Lodging</a><a href="#compare">Comparison</a></nav>
+  <nav class="strip"><a href="#verdict">Quick verdict</a><a href="#destinations">Destinations</a><a href="#details">Lodging</a><a href="#cabins">Cabin ideas</a><a href="#compare">Comparison</a></nav>
   <main>
     <section class="verdict" id="verdict">
       <p class="eyebrow">Ranking lens</p>
@@ -313,6 +325,52 @@
 <tr><td>Squamish + Whistler</td><td>Canada</td><td>Sightseeing ★★★★★</td><td>Nature ★★★★★</td><td>Culture ★★★☆☆</td><td>Best for dramatic scenery and nature; lower culture than Victoria or Vancouver, but very strong on sightseeing and hikes.</td></tr>
 <tr><td>North Oregon Coast</td><td>United States</td><td>Sightseeing ★★★★☆</td><td>Nature ★★★★★</td><td>Culture ★★★☆☆</td><td>Best U.S. alternative if the group wants beaches and headlands over city culture.</td></tr>
 <tr><td>Olympic Peninsula</td><td>United States</td><td>Sightseeing ★★★★☆</td><td>Nature ★★★★★</td><td>Culture ★★☆☆☆</td><td>Excellent for hikes and nature, but ranked lower because culture is the weakest of the five.</td></tr></tbody></table></div></div></section>
+
+    <section class="cabin-section" id="cabins">
+      <div class="cabin-inner">
+        <p class="eyebrow">Park + cabin addendum</p>
+        <h2>Cabin-style ideas worth checking next.</h2>
+        <p class="lead">These are not promoted into the main top five yet; they are the best “national park / state park / waterfront-lake-river-mountain cabin” directions to pressure-test against the current shortlist.</p>
+        <div class="cabin-grid">
+          <article class="cabin-card">
+            <p class="eyebrow">Closest match to Hood Canal cabin brief</p>
+            <h3>Hood Canal + Lake Cushman</h3>
+            <p><strong>Why look:</strong> waterfront or lake cabin feel, Olympic foothills, Staircase, Twanoh/Potlatch state parks, oysters, and a much easier drive than Canada or Oregon.</p>
+            <p><strong>Tradeoff:</strong> culture is lighter; this is mainly lake/canal/mountain downtime.</p>
+            <div class="scores"><span>Sightseeing ★★★★☆</span><span>Nature ★★★★★</span><span>Culture ★★☆☆☆</span></div>
+            <div class="links"><a href="https://www.explorehoodcanal.com/" target="_blank" rel="noopener">Explore Hood Canal</a><a href="https://www.nps.gov/olym/planyourvisit/visiting-staircase.htm" target="_blank" rel="noopener">Olympic Staircase</a><a href="https://parks.wa.gov/find-parks/state-parks/twanoh-state-park" target="_blank" rel="noopener">Twanoh State Park</a><a href="https://parks.wa.gov/find-parks/state-parks/potlatch-state-park" target="_blank" rel="noopener">Potlatch State Park</a><a href="https://hamahamaoysters.com/pages/visit" target="_blank" rel="noopener">Hama Hama</a></div>
+            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Hoodsport--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Hoodsport</span><em>Open</em></a><a href="https://www.airbnb.com/s/Lake-Cushman--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Lake Cushman</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Hoodsport%2C%20Washington%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Hood Canal</span><em>Open</em></a></div>
+          </article>
+          <article class="cabin-card">
+            <p class="eyebrow">Best national-park sightseeing</p>
+            <h3>Mount Rainier cabin base</h3>
+            <p><strong>Why look:</strong> iconic Paradise/Sunrise sightseeing, wildflower season potential, waterfall/forest walks, and Ashford or Packwood cabin inventory.</p>
+            <p><strong>Tradeoff:</strong> July crowding and timed-entry/park access rules can make toddler logistics rigid.</p>
+            <div class="scores"><span>Sightseeing ★★★★★</span><span>Nature ★★★★★</span><span>Culture ★★☆☆☆</span></div>
+            <div class="links"><a href="https://www.nps.gov/mora/index.htm" target="_blank" rel="noopener">Mount Rainier NP</a><a href="https://www.nps.gov/places/paradise.htm" target="_blank" rel="noopener">Paradise</a><a href="https://www.nps.gov/mora/planyourvisit/sunrise.htm" target="_blank" rel="noopener">Sunrise</a><a href="https://visitrainier.com/" target="_blank" rel="noopener">Visit Rainier</a></div>
+            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Ashford--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Ashford</span><em>Open</em></a><a href="https://www.airbnb.com/s/Packwood--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Packwood</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Ashford%2C%20Washington%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Rainier base</span><em>Open</em></a></div>
+          </article>
+          <article class="cabin-card">
+            <p class="eyebrow">Best river + culture add</p>
+            <h3>Hood River + Columbia Gorge</h3>
+            <p><strong>Why look:</strong> river views, waterfalls, basalt cliffs, orchards, Hood River food/shops, and a stronger culture layer than most cabin bases.</p>
+            <p><strong>Tradeoff:</strong> less “quiet lake cabin,” more active river town; July heat/wind can shape the day.</p>
+            <div class="scores"><span>Sightseeing ★★★★★</span><span>Nature ★★★★☆</span><span>Culture ★★★★☆</span></div>
+            <div class="links"><a href="https://visithoodriver.com/" target="_blank" rel="noopener">Visit Hood River</a><a href="https://www.fs.usda.gov/crgnsa" target="_blank" rel="noopener">Columbia Gorge</a><a href="https://www.fs.usda.gov/r06/columbiarivergorge/recreation/multnomah-falls" target="_blank" rel="noopener">Multnomah Falls</a><a href="https://www.hoodriverfruitloop.com/" target="_blank" rel="noopener">Fruit Loop</a></div>
+            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Hood-River--Oregon--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Hood River</span><em>Open</em></a><a href="https://www.vacasa.com/search?place=/usa/Oregon/Hood-River/&arrival=07%2F05%2F2026&departure=07%2F10%2F2026&bedrooms=3" target="_blank" rel="noopener"><span>Vacasa 3BR Hood River</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Hood%20River%2C%20Oregon%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Hood River</span><em>Open</em></a></div>
+          </article>
+          <article class="cabin-card">
+            <p class="eyebrow">Best mountain-cabin feel</p>
+            <h3>Mount Baker / Glacier</h3>
+            <p><strong>Why look:</strong> true river/mountain cabin inventory, Picture Lake/Heather Meadows scenery, forest hikes, and North Cascades access without border/ferry logistics.</p>
+            <p><strong>Tradeoff:</strong> culture and grocery depth are limited; this is a nature-first cabin trip.</p>
+            <div class="scores"><span>Sightseeing ★★★★☆</span><span>Nature ★★★★★</span><span>Culture ★★☆☆☆</span></div>
+            <div class="links"><a href="https://www.nps.gov/noca/index.htm" target="_blank" rel="noopener">North Cascades NP</a><a href="https://www.fs.usda.gov/r06/mbs/recreation/mt-baker-highway-sr-542" target="_blank" rel="noopener">Mount Baker Byway</a><a href="https://mtbakerlodging.com/" target="_blank" rel="noopener">Mt Baker Lodging</a></div>
+            <div class="cabin-lodging"><a href="https://www.airbnb.com/s/Glacier--Washington--United-States/homes?checkin=2026-07-05&checkout=2026-07-10&min_bedrooms=3" target="_blank" rel="noopener"><span>Airbnb 3BR Glacier</span><em>Open</em></a><a href="https://www.vrbo.com/search?destination=Glacier%2C%20Washington%2C%20United%20States&startDate=2026-07-05&endDate=2026-07-10&bedroom_count_gt=2" target="_blank" rel="noopener"><span>VRBO 3BR Glacier</span><em>Open</em></a><a href="https://mtbakerlodging.com/vacation-rentals/?bedrooms=3" target="_blank" rel="noopener"><span>Mt Baker Lodging 3BR</span><em>Open</em></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
     <section class="pillars"><div class="pillar-copy"><p class="eyebrow">Current shortlist</p><h2>Five family trip options.</h2><ul><li>Ranked by sightseeing first, hikes/nature second, culture third.</li><li>Includes two U.S. options so the shortlist is not Canada-only.</li><li>Lodging is screened around 3+ bedrooms, not provided crib gear.</li><li>Each destination keeps multiple lodging paths so one booked-out house does not collapse the plan.</li></ul></div><div class="pillar-art" role="img" aria-label="Olympic mountain meadow"></div></section>
   </main>
   <footer><p><strong>Share-safe public trip board.</strong></p><p>No booking, host contact, calendar hold, reminder, purchase, or external message has been made from this page. Lodging prices and availability are dynamic and should be rechecked before deciding.</p></footer>
