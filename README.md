@@ -15,10 +15,12 @@ https://westonruths.github.io/family-trip-hub/
 
 ## Current recommendations
 
-1. Squamish + Whistler
+1. Whistler
 2. Hood Canal + Lake Cushman
 3. Mount Baker / Glacier
 4. Hood River + Columbia Gorge
 5. North Oregon Coast
 6. North Vancouver / Vancouver
 7. Sooke + Victoria
+
+Whistler is currently fleshed out as the lead option with Airbnb proposal cards and a daily itinerary; the other options remain on the page as fallbacks.
