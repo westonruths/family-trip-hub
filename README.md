@@ -1,6 +1,6 @@
 # Hu Family Adventure: July 2026
 
-Shareable site for the confirmed July 2026 Hu family Whistler trip, with the itinerary first and original options retained lower for future planning reference.
+Shareable site for the confirmed July 2026 Hu family Whistler trip, now split into subpages: Whistler itinerary first, future options separate.
 
 Published via GitHub Pages at:
 https://westonruths.github.io/family-trip-hub/
@@ -23,4 +23,10 @@ https://westonruths.github.io/family-trip-hub/
 6. North Vancouver / Vancouver
 7. Sooke + Victoria
 
-Whistler is now the confirmed option. The page opens with the Whistler itinerary, keeps the booked Airbnb and Casabella Crescent address easy to find, and moves the other options lower for future reference.
+Whistler is now the confirmed option. The root page and /whistler/ open directly to the Whistler itinerary; future options live under /future-options/.
+
+
+## Subpages
+
+- Confirmed Whistler itinerary: https://westonruths.github.io/family-trip-hub/ and https://westonruths.github.io/family-trip-hub/whistler/
+- Future-reference options: https://westonruths.github.io/family-trip-hub/future-options/
