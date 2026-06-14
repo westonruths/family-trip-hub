@@ -1,6 +1,6 @@
 # Hu Family Adventure: July 2026
 
-Shareable decision site for July 2026 Hu family adventure options.
+Shareable decision site for the confirmed July 2026 Hu family Whistler trip, retaining the original options for future planning reference.
 
 Published via GitHub Pages at:
 https://westonruths.github.io/family-trip-hub/
@@ -10,12 +10,12 @@ https://westonruths.github.io/family-trip-hub/
 - Built for family decision-making.
 - Current shortlist keeps options within roughly six hours of Kirkland under normal routing.
 
-- No private home address or sensitive details included.
-- No booking, host contact, calendar event, reminder, or purchase was made.
+- The booked accommodation address is included because the family asked to record it on the trip site.
+- This update only records the family’s booking; no host contact, calendar event, reminder, or purchase was made by the agent.
 
-## Current recommendations
+## Current status
 
-1. Whistler
+1. Whistler — confirmed July 5–10, 2026; accommodation: 4875 Casabella Crescent, Whistler, BC V8E 0Z4, Canada
 2. Hood Canal + Lake Cushman
 3. Mount Baker / Glacier
 4. Hood River + Columbia Gorge
@@ -23,4 +23,4 @@ https://westonruths.github.io/family-trip-hub/
 6. North Vancouver / Vancouver
 7. Sooke + Victoria
 
-Whistler is currently fleshed out as the lead option with Airbnb proposal cards and a daily itinerary; the other options remain on the page as fallbacks.
+Whistler is now the confirmed option with the booked Airbnb and Casabella Crescent address recorded; the other options remain on the page for future reference and trip planning.
