@@ -30,3 +30,7 @@ Whistler is now the confirmed option. The root page and /whistler/ open directly
 
 - Confirmed Whistler itinerary: https://westonruths.github.io/family-trip-hub/ and https://westonruths.github.io/family-trip-hub/whistler/
 - Future-reference options: https://westonruths.github.io/family-trip-hub/future-options/
+
+## Host logistics update
+
+Public pages include only non-sensitive host logistics: corrected postal code, check-in/check-out, parking, transit, Pack ’n Play, hot tub, and checkout notes. Door code, Wi-Fi password, garbage code, and security phone are kept out of the public repo.
