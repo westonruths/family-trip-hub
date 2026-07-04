@@ -1,36 +1,26 @@
 # Hu Family Adventure: July 2026
 
-Shareable site for the confirmed July 2026 Hu family Whistler trip, now split into subpages: Whistler itinerary first, future options separate.
+Shareable GitHub Pages site for the confirmed July 2026 Hu family Whistler trip.
 
 Published via GitHub Pages at:
 https://westonruths.github.io/family-trip-hub/
 
-## Scope
-
-- Built for family decision-making.
-- Current shortlist keeps options within roughly six hours of Kirkland under normal routing.
-
-- The booked accommodation address is included because the family asked to record it on the trip site.
-- This update only records the family’s booking; no host contact, calendar event, reminder, or purchase was made by the agent.
-
 ## Current status
 
-1. Whistler — confirmed July 5–10, 2026; accommodation: 4875 Casabella Crescent, Whistler, BC V8E 0Z4, Canada
-2. Hood Canal + Lake Cushman
-3. Mount Baker / Glacier
-4. Hood River + Columbia Gorge
-5. North Oregon Coast
-6. North Vancouver / Vancouver
-7. Sooke + Victoria
+- Confirmed trip: Whistler, July 5–10, 2026.
+- Check-in and checkout days are treated as travel-only days.
+- The full itinerary now covers July 6–9 with at least one hike per day, two gondola experiences, waterfall/lake-view hiking, Indigenous culture, and permit/ticket notes.
+- Confirmed accommodation: Airbnb 50807944 at 4875 Casabella Crescent, Whistler, BC V0N 1B4, Canada.
 
-Whistler is now the confirmed option. The root page and /whistler/ open directly to the Whistler itinerary; future options live under /future-options/.
-
-
-## Subpages
+## Public pages
 
 - Confirmed Whistler itinerary: https://westonruths.github.io/family-trip-hub/ and https://westonruths.github.io/family-trip-hub/whistler/
 - Future-reference options: https://westonruths.github.io/family-trip-hub/future-options/
 
-## Host logistics update
+## Safety/privacy note
 
-Public pages include only non-sensitive host logistics: corrected postal code, check-in/check-out, parking, transit, Pack ’n Play, hot tub, and checkout notes. Door code, Wi-Fi password, garbage code, and security phone are kept out of the public repo.
+Public pages include only non-sensitive host logistics: address, check-in/check-out, parking, transit, Pack ’n Play, hot tub, and checkout notes. Door code, Wi-Fi password, garbage code, and security phone are kept out of the public repo.
+
+## Side-effect note
+
+This update modified and published the GitHub Pages site only. No ticket purchases, reservations, vendor/host contact, calendar events, or reminders were created.
