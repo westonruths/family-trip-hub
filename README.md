@@ -9,7 +9,7 @@ https://westonruths.github.io/family-trip-hub/
 
 - Confirmed trip: Whistler, July 5–10, 2026.
 - Check-in and checkout days are treated as travel-only days.
-- The full itinerary now covers July 6–9 with at least one hike per day, two gondola experiences, waterfall/lake-view hiking, Indigenous culture, and permit/ticket notes.
+- The full itinerary now covers July 6–9 with at least one hike per day, two gondola experiences, waterfall/lake-view hiking, Indigenous culture, permit/ticket notes, and updated ticket/parking/tour details from official sources.
 - Confirmed accommodation: Airbnb 50807944 at 4875 Casabella Crescent, Whistler, BC V0N 1B4, Canada.
 
 ## Public pages
@@ -23,4 +23,4 @@ Public pages include only non-sensitive host logistics: address, check-in/check-
 
 ## Side-effect note
 
-This update modified and published the GitHub Pages site only. No ticket purchases, reservations, vendor/host contact, calendar events, or reminders were created.
+This update modified and published the GitHub Pages site only, including the follow-up research details returned by the background agents. No ticket purchases, reservations, vendor/host contact, calendar events, or reminders were created.
