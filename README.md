@@ -24,3 +24,6 @@ Public pages include only non-sensitive host logistics: address, check-in/check-
 ## Side-effect note
 
 This update modified and published the GitHub Pages site only, including the follow-up research details returned by the background agents. No ticket purchases, reservations, vendor/host contact, calendar events, or reminders were created.
+
+
+Latest update: added Vallea Lumina as the optional lower-mileage night activity and added a public-safe Kirkland-to-Whistler travel-day drive rhythm with scenic stretch stops.
