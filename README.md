@@ -27,4 +27,4 @@ Public pages include only non-sensitive host logistics: address, check-in/check-
 This update modified and published the GitHub Pages site only, including the follow-up research details returned by the background agents. No ticket purchases, reservations, vendor/host contact, calendar events, or reminders were created.
 
 
-Latest update: added the Whistler family bike-ride page with Black Diamond rental recommendation, verified 10:00–11:30 start windows, kids-trailer fit notes, backup vendors, and Valley Trail route links.
+Latest update: expanded the Whistler family bike-ride page with bike/trailer/trail imagery, a trail-photo hero, lunch-stop recommendations, and map links for picnic/restaurant options.
