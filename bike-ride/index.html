@@ -9,11 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-  <header class="nav"><strong><a href="../">Hu Family Adventure</a></strong><div><a href="../whistler/">Itinerary</a><a href="#recommendation">Bike plan</a><a href="#routes">Routes</a><a href="#links">Links</a></div></header>
+  <header class="nav"><strong><a href="../">Hu Family Adventure</a></strong><div><a href="../whistler/">Itinerary</a><a href="#recommendation">Bike plan</a><a href="#map">Map</a><a href="#routes">Routes</a><a href="#links">Links</a></div></header>
   <section class="hero bike-hero"><div class="hero-inner"><p class="eyebrow">Wed Jul 8 · family-friendly bike option</p><h1>Whistler Valley Trail bike ride</h1><p>A non-mountain-bike plan for six adults plus Aria: rent recreational bikes and a secure kids trailer, then ride the paved/shared Valley Trail with lake and park stops.</p><div class="hero-criteria"><span>Not mountain biking</span><span>6 adult bikes</span><span>1 kids trailer</span><span>Best window 10:30–2:30</span><span>15–20 km target</span><span>Multiple bailouts</span><span>No booking made yet</span></div><div class="cta-row"><a class="cta primary" href="https://black-diamond-bikes.checkfront.com/reserve/?category_id=2&amp;date=20260708" target="_blank" rel="noopener">Book adult bikes</a><a class="cta secondary" href="https://black-diamond-bikes.checkfront.com/reserve/?category_id=5&amp;date=20260708" target="_blank" rel="noopener">Book trailer</a></div></div></section>
-  <nav class="strip"><a href="../whistler/">Whistler plan</a><a href="#recommendation">Best rental</a><a href="#timing">Pickup times</a><a href="#routes">Trail options</a><a href="#lunch">Lunch stops</a><a href="#backup">Backups</a><a href="#links">All links</a></nav>
+  <nav class="strip"><a href="../whistler/">Whistler plan</a><a href="#recommendation">Best rental</a><a href="#timing">Pickup times</a><a href="#map">Map</a><a href="#routes">Trail options</a><a href="#lunch">Lunch stops</a><a href="#backup">Backups</a><a href="#links">All links</a></nav>
   <main>
     <div class="details-wrap">
       <section class="destination-detail" id="recommendation">
@@ -44,6 +46,8 @@
 
       <section class="section-block" id="photos"><p class="eyebrow">What you are booking / riding</p><h2>Bike, trailer, and Valley Trail visuals.</h2><div class="media-grid"><figure class="media-card"><img src="https://i0.wp.com/blackdiamondwhistler.com/wp-content/uploads/2025/02/BOBCAT-TRAIL-4-29-C2-MARIN24-P-1.jpg?fit=1024%2C683&amp;ssl=1" alt="Black Diamond Marin Bobcat Trail recreational hardtail bike"><figcaption><strong>Adult bike</strong>Black Diamond’s recreational hardtail category is the Marin Bobcat Trail style bike recommended for the Valley Trail.</figcaption></figure><figure class="media-card"><img src="https://i0.wp.com/blackdiamondwhistler.com/wp-content/uploads/2024/05/thule_trailer.jpg?fit=1024%2C1024&amp;ssl=1" alt="Black Diamond kids trailer for one or two small children"><figcaption><strong>Kids trailer</strong>The trailer is the key Aria fit-check item: helmet, harness, upright posture, and comfort all need to pass before leaving the shop.</figcaption></figure><figure class="media-card"><img src="https://www.whistler.ca/wp-content/uploads/2023/02/Valley-Trail-through-Lakeside-Park-image-by-Justa-Jeskova-jj027392-e1751241948832-1024x453.jpg" alt="Whistler Valley Trail through Lakeside Park"><figcaption><strong>Trail feel</strong>Expect paved/shared-use Valley Trail riding with lake and park stops, not singletrack or bike-park terrain.</figcaption></figure><figure class="media-card"><img src="https://www.whistler.ca/wp-content/uploads/2024/06/DJI_0183.jpg" alt="Rainbow Park beside Alta Lake in Whistler"><figcaption><strong>Park stop</strong>Rainbow Park / Alta Lake is the best scenic stop on the south-lakes route if the group wants a snack, diaper, or toddler reset.</figcaption></figure></div></section>
 
+      <section class="section-block" id="map"><p class="eyebrow">Route map</p><h2>Three Valley Trail options from Black Diamond.</h2><p>The lines are planning overlays on an OpenStreetMap base, not turn-by-turn GPS tracks. Use the linked Google Maps routes and the official Whistler Valley Trail map before riding, and follow posted signs if the trail routing differs.</p><div id="trail-map" class="trail-map" role="img" aria-label="Map showing south lakes, north lakes, and short bailout Valley Trail bike ride options from Black Diamond Bike Rentals"></div><div class="map-legend"><span><b class="legend-line south"></b>South lakes · best family/lunch route</span><span><b class="legend-line north"></b>North lakes · longer scenic option</span><span><b class="legend-line short"></b>Short bailout · park reset route</span></div></section>
+
       <section class="section-block" id="routes"><p class="eyebrow">Trail choice</p><h2>Ride the Valley Trail, not singletrack.</h2><p>The official Resort Municipality of Whistler page describes the Valley Trail as a paved shared-use network of more than 50 km connecting Whistler Village with parks and neighborhoods. It has some network gaps and shared-use etiquette, so use the map and ride conservatively with the trailer.</p><div class="proposal-grid"><div class="proposal-card recommended"><strong>Primary route · Alta / Rainbow / Lakeside</strong><p>Village → Rainbow Park / Alta Lake → Lakeside or Wayside Park → optional Nita/Alpha Lake extension → return. This is the best family shape because it has parks, lake stops, bathrooms/food nearby, and obvious turnaround points.</p><a href="https://www.google.com/maps/dir/?api=1&amp;origin=4340+Sundial+Crescent%2C+Whistler%2C+BC&amp;destination=4340+Sundial+Crescent%2C+Whistler%2C+BC&amp;waypoints=Rainbow+Park%2C+Whistler%2C+BC%7CLakeside+Park%2C+Whistler%2C+BC%7CNita+Lake%2C+Whistler%2C+BC&amp;travelmode=bicycling" target="_blank" rel="noopener">Open south-lakes route</a></div><div class="proposal-card"><strong>Longer scenic route · Lost / Green / Meadow</strong><p>Village → Lost Lake → Green Lake / Meadow Park → return through the Valley Trail network. Black Diamond lists Green Lake to Meadow Park as a 4-hour Valley Trail ride and says it can be extended with stops.</p><a href="https://www.google.com/maps/dir/?api=1&amp;origin=4340+Sundial+Crescent%2C+Whistler%2C+BC&amp;destination=4340+Sundial+Crescent%2C+Whistler%2C+BC&amp;waypoints=Lost+Lake+Park%2C+Whistler%2C+BC%7CGreen+Lake%2C+Whistler%2C+BC%7CMeadow+Park%2C+Whistler%2C+BC&amp;travelmode=bicycling" target="_blank" rel="noopener">Open north-lakes route</a></div><div class="proposal-card"><strong>Do not force · full five-lake circuit</strong><p>The full lakes loop can become a 25–30+ km day once real routing, park stops, snack breaks, and trailer pace are included. Do this only with an 8-hour rental and a very happy toddler.</p><a href="https://www.letsgobiking.net/beginner/whistler-valley-trai/" target="_blank" rel="noopener">Five-lake route idea</a></div></div></section>
 
       <section class="section-block" id="lunch"><p class="eyebrow">Lunch / snack stops</p><h2>Plan one real stop, then keep riding optional.</h2><p>For a 10:30am pickup, the cleanest rhythm is: ride 45–75 minutes, stop for lunch or picnic, then decide whether to extend or turn back. With Aria in the trailer, the best lunch stop is the one that prevents the ride from becoming a forced march.</p><div class="proposal-grid"><div class="proposal-card recommended"><strong>Best family stop · Rainbow Park picnic</strong><p>Pack sandwiches/snacks from the Village and make Rainbow Park / Alta Lake the planned lunch. It keeps the ride outdoors, has the best lake payoff, and gives Aria a reset without moving bikes through a restaurant.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Rainbow+Park%2C+Whistler%2C+BC" target="_blank" rel="noopener">Open Rainbow Park</a></div><div class="proposal-card"><strong>Best restaurant-ish stop · Creekside / Nita area</strong><p>If the group continues south past Lakeside/Wayside, use Creekside/Nita as the lunch cluster. Good practical targets: Fix Café at Nita Lake Lodge for casual café food, Southside Diner for easy diner food, or Creekbread if the timing matches their hours.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Fix+Cafe+Nita+Lake+Lodge+Whistler" target="_blank" rel="noopener">Fix Café</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Southside+Diner+Whistler" target="_blank" rel="noopener">Southside Diner</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Creekbread+Whistler" target="_blank" rel="noopener">Creekbread</a></div><div class="proposal-card"><strong>Lowest-friction fallback · return to Village</strong><p>If Aria is done or the weather turns, turn back and eat near the rental shop. Portobello, Purebread, or a quick Village café is easier than pushing farther with a tired toddler.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Portobello+Whistler" target="_blank" rel="noopener">Portobello</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Purebread+Whistler" target="_blank" rel="noopener">Purebread</a></div></div></section>
@@ -56,5 +60,49 @@
     </div>
   </main>
   <footer><p><strong>Updated July 7, 2026.</strong></p><p>Family Valley Trail bike rental research for Wednesday Jul 8: Black Diamond is the recommended booking path; 10:30am–2:30pm is the best realistic window; no booking or vendor contact has been made.</p></footer>
+
+  <script>
+    (function () {
+      if (!window.L || !document.getElementById('trail-map')) return;
+      const map = L.map('trail-map', { scrollWheelZoom: false }).setView([50.122, -122.966], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      const points = {
+        blackDiamond: [50.1139759, -122.9541636],
+        rainbow: [50.120533, -122.984364],
+        lakeside: [50.1073617, -122.9805621],
+        nita: [50.099345, -122.9951977],
+        alpha: [50.09473, -122.9992372],
+        lost: [50.1266614, -122.9351891],
+        green: [50.1557988, -122.9268068],
+        meadow: [50.1447639, -122.9605973],
+        creekside: [50.0953424, -122.9923382]
+      };
+
+      const routes = [
+        { name: 'South lakes · best family/lunch route', color: '#d98b8f', pts: [points.blackDiamond, [50.114, -122.960], [50.115, -122.968], [50.118, -122.977], points.rainbow, [50.114, -122.984], points.lakeside, [50.103, -122.988], points.nita, points.creekside, points.alpha] },
+        { name: 'North lakes · longer scenic option', color: '#4f5b45', pts: [points.blackDiamond, [50.117, -122.948], points.lost, [50.134, -122.943], [50.141, -122.952], points.meadow, [50.149, -122.952], [50.154, -122.943], points.green] },
+        { name: 'Short bailout · Village to Rainbow Park', color: '#f4a08a', dash: '6 8', pts: [points.blackDiamond, [50.114, -122.960], [50.115, -122.968], [50.118, -122.977], points.rainbow] }
+      ];
+
+      routes.forEach(route => L.polyline(route.pts, { color: route.color, weight: 5, opacity: 0.9, dashArray: route.dash || null }).addTo(map).bindPopup(route.name));
+
+      const markers = [
+        ['Start / rental: Black Diamond', points.blackDiamond, '4340 Sundial Crescent. Pick up bikes + trailer here.'],
+        ['Rainbow Park / Alta Lake', points.rainbow, 'Best picnic and toddler-reset stop.'],
+        ['Lakeside Park', points.lakeside, 'South-lakes turnaround / lake stop.'],
+        ['Nita Lake / Creekside lunch cluster', points.nita, 'Fix Café, Southside Diner, Creekbread area if extending south.'],
+        ['Alpha Lake Park', points.alpha, 'Only continue here if Aria and the group are still happy.'],
+        ['Lost Lake Park', points.lost, 'Close-in north/east scenic add-on.'],
+        ['Green Lake', points.green, 'Longer scenic north-lakes option.'],
+        ['Meadow Park', points.meadow, 'Longer north route turnaround.']
+      ];
+      markers.forEach(([title, ll, body]) => L.marker(ll).addTo(map).bindPopup('<strong>' + title + '</strong><br>' + body));
+      map.fitBounds(routes.flatMap(r => r.pts), { padding: [24, 24] });
+    })();
+  </script>
 </body>
 </html>
