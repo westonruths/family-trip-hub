@@ -15,6 +15,7 @@ https://westonruths.github.io/family-trip-hub/
 ## Public pages
 
 - Confirmed Whistler itinerary: https://westonruths.github.io/family-trip-hub/ and https://westonruths.github.io/family-trip-hub/whistler/
+- Whistler family bike-ride research: https://westonruths.github.io/family-trip-hub/bike-ride/
 - Future-reference options: https://westonruths.github.io/family-trip-hub/future-options/
 
 ## Safety/privacy note
@@ -26,4 +27,4 @@ Public pages include only non-sensitive host logistics: address, check-in/check-
 This update modified and published the GitHub Pages site only, including the follow-up research details returned by the background agents. No ticket purchases, reservations, vendor/host contact, calendar events, or reminders were created.
 
 
-Latest update: added Vallea Lumina as the optional lower-mileage night activity and added a public-safe Kirkland-to-Whistler travel-day drive rhythm with scenic stretch stops.
+Latest update: added the Whistler family bike-ride page with Black Diamond rental recommendation, verified 10:00–11:30 start windows, kids-trailer fit notes, backup vendors, and Valley Trail route links.
