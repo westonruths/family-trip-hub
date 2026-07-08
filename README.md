@@ -27,4 +27,4 @@ Public pages include only non-sensitive host logistics: address, check-in/check-
 This update modified and published the GitHub Pages site only, including the follow-up research details returned by the background agents. No ticket purchases, reservations, vendor/host contact, calendar events, or reminders were created.
 
 
-Latest update: added a Jul 8 Whistler weather call to the bike-ride page: dry, mild, overcast, breezy, and okay for the planned 10:30am–2:30pm family ride.
+Latest update: changed the bike-ride page to the adult-only plan: 4 recreational bikes, no trailer, 10:30am–2:30pm, south-lakes Valley Trail route, and no booking yet.
